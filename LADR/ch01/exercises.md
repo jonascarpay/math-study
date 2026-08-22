@@ -2,28 +2,100 @@
 
 1. Show that α + β = β + α for all α, β ∈ 𝐂.
 
-<!-- pending -->
+Write α = a + bi and β = c + di with a, b, c, d ∈ 𝐑. By the definition of
+addition on 𝐂 (1.1),
+
+    α + β = (a + c) + (b + d)i,
+    β + α = (c + a) + (d + b)i.
+
+Since addition on 𝐑 is commutative, a + c = c + a and b + d = d + b. Complex
+numbers are ordered pairs, so equality is coordinatewise, and therefore
+
+    α + β = (a + c) + (b + d)i = (c + a) + (d + b)i = β + α.
+
+<!-- correct -->
 
 2. Show that (α + β) + λ = α + (β + λ) for all α, β, λ ∈ 𝐂.
 
-<!-- pending -->
+Write α = a + bi, β = c + di, λ = e + fi with a, …, f ∈ 𝐑. Applying the
+definition of addition on 𝐂 (1.1) twice on each side,
+
+    (α + β) + λ = ((a + c) + e) + ((b + d) + f)i,
+    α + (β + λ) = (a + (c + e)) + (b + (d + f))i.
+
+Addition on 𝐑 is associative, so the real parts agree and the imaginary parts
+agree, hence the two are equal.
+
+<!-- correct -->
 
 3. Show that (αβ)λ = α(βλ) for all α, β, λ ∈ 𝐂.
 
-<!-- pending -->
+Write α = a + bi, β = c + di, λ = e + fi with a, …, f ∈ 𝐑. Applying the
+definition of multiplication on 𝐂 (1.1) twice on each side and expanding:
+
+    αβ = (ac − bd) + (ad + bc)i,
+    (αβ)λ = [(ac − bd)e − (ad + bc)f] + [(ac − bd)f + (ad + bc)e]i
+          = (ace − bde − adf − bcf) + (acf − bdf + ade + bce)i;
+
+    βλ = (ce − df) + (cf + de)i,
+    α(βλ) = [a(ce − df) − b(cf + de)] + [a(cf + de) + b(ce − df)]i
+          = (ace − adf − bcf − bde) + (acf + ade + bce − bdf)i.
+
+Using associativity and commutativity of multiplication on 𝐑, the real parts
+consist of the same four terms ace, −bde, −adf, −bcf, and the imaginary parts
+of the same four terms acf, −bdf, ade, bce. Equality in 𝐂 is coordinatewise,
+so (αβ)λ = α(βλ).
+
+<!-- correct -->
 
 4. Show that λ(α + β) = λα + λβ for all λ, α, β ∈ 𝐂.
 
-<!-- pending -->
+<!-- skipped -->
 
 5. Show that for every α ∈ 𝐂, there exists a unique β ∈ 𝐂 such that α + β = 0.
 
-<!-- pending -->
+Let α = a₁ + a₂i and β = b₁ + b₂i with a₁, a₂, b₁, b₂ ∈ 𝐑. By 1.1,
+
+    α + β = (a₁ + b₁) + (a₂ + b₂)i,
+
+and 0 = 0 + 0i. Complex numbers are ordered pairs, so equality is
+coordinatewise:
+
+    α + β = 0  ⟺  a₁ + b₁ = 0 and a₂ + b₂ = 0.
+
+So the condition on β is exactly that b₁, b₂ are additive inverses of a₁, a₂
+in 𝐑.
+
+Existence: take b₁ = −a₁ and b₂ = −a₂, which exist in 𝐑.
+
+Uniqueness: suppose γ = c₁ + c₂i also satisfies α + γ = 0. Then a₁ + b₁ =
+0 = a₁ + c₁ and a₂ + b₂ = 0 = a₂ + c₂, so by uniqueness of additive inverses
+in 𝐑 we get b₁ = c₁ and b₂ = c₂, hence β = γ.
+
+<!-- correct -->
 
 6. Show that for every α ∈ 𝐂 with α ≠ 0, there exists a unique β ∈ 𝐂 such
    that αβ = 1.
 
-<!-- pending -->
+Let α = a₁ + a₂i with a₁, a₂ ∈ 𝐑, and write s = a₁² + a₂².
+
+Existence: since α ≠ 0, a₁ and a₂ are not both 0; squares in 𝐑 are ≥ 0, so
+s > 0 and 1/s ∈ 𝐑. Take β to be the conjugate of α scaled by 1/s,
+
+    β = (a₁/s) + (−a₂/s)i.
+
+By 1.1,
+
+    αβ = (a₁·(a₁/s) − a₂·(−a₂/s)) + (a₁·(−a₂/s) + a₂·(a₁/s))i
+       = ((a₁² + a₂²)/s) + 0i
+       = 1 + 0i = 1.
+
+Uniqueness: suppose αβ = αγ = 1. Then, using commutativity and associativity
+of multiplication on 𝐂 (1.3, and exercise 3) and λ1 = λ,
+
+    γ = γ(αβ) = (γα)β = (αγ)β = 1β = β.
+
+<!-- correct -->
 
 7. Show that
 
@@ -31,43 +103,77 @@
 
    is a cube root of 1 (meaning that its cube equals 1).
 
-<!-- pending -->
+<!-- skipped -->
 
 8. Find two distinct square roots of i.
 
-<!-- pending -->
+    ±(1/√2 + (1/√2)i).
+
+Check, by 1.1:
+
+    (1/√2 + (1/√2)i)² = (1/2 − 1/2) + (1/2 + 1/2)i = i,
+
+and the square of the negative is the same.
+
+<!-- correct -->
 
 9. Find x ∈ 𝐑⁴ such that
 
        (4, −3, 1, 7) + 2x = (5, 9, −6, 8).
 
-<!-- pending -->
+Addition and scalar multiplication in 𝐑⁴ are coordinatewise, so 2xₖ is the
+difference of the corresponding coordinates:
+
+    x = (1/2, 6, −7/2, 1/2).
+
+<!-- correct -->
 
 10. Explain why there does not exist λ ∈ 𝐂 such that
 
         λ(2 − 3i, 5 + 4i, −6 + 7i) = (12 − 5i, 7 + 22i, −32 − 9i).
 
-<!-- pending -->
+<!-- skipped -->
 
 11. Show that (x + y) + z = x + (y + z) for all x, y, z ∈ 𝐅ⁿ.
 
-<!-- pending -->
+Write x = (x₁, …, xₙ), y = (y₁, …, yₙ), z = (z₁, …, zₙ) with all coordinates
+in 𝐅. Addition in 𝐅ⁿ is coordinatewise (1.12), so for each k ∈ {1, …, n} the
+k-th coordinate of (x + y) + z is (xₖ + yₖ) + zₖ and that of x + (y + z) is
+xₖ + (yₖ + zₖ). Addition in 𝐅 is associative (𝐑 by assumption, 𝐂 by exercise
+2), so these agree. Lists are equal iff their coordinates agree, hence
+(x + y) + z = x + (y + z).
+
+<!-- correct -->
 
 12. Show that (ab)x = a(bx) for all x ∈ 𝐅ⁿ and all a, b ∈ 𝐅.
 
-<!-- pending -->
+Write x = (x₁, …, xₙ). Scalar multiplication in 𝐅ⁿ is coordinatewise (1.13),
+so the k-th coordinate of (ab)x is (ab)xₖ and that of a(bx) is a(bxₖ).
+Multiplication in 𝐅 is associative (𝐑 by assumption, 𝐂 by exercise 3), so
+these agree for every k, hence (ab)x = a(bx).
+
+<!-- correct -->
 
 13. Show that 1x = x for all x ∈ 𝐅ⁿ.
 
-<!-- pending -->
+Write x = (x₁, …, xₙ). By the definition of scalar multiplication in 𝐅ⁿ
+(1.13), 1x = (1x₁, …, 1xₙ). Since 1 is the multiplicative identity of 𝐅,
+1xₖ = xₖ for each k, so 1x = x.
+
+<!-- correct -->
 
 14. Show that λ(x + y) = λx + λy for all λ ∈ 𝐅 and all x, y ∈ 𝐅ⁿ.
 
-<!-- pending -->
+Write x = (x₁, …, xₙ) and y = (y₁, …, yₙ). Addition and scalar multiplication
+in 𝐅ⁿ are coordinatewise (1.12, 1.13), so the k-th coordinate of λ(x + y) is
+λ(xₖ + yₖ) and that of λx + λy is λxₖ + λyₖ. These agree by distributivity in
+𝐅 (1.3), so λ(x + y) = λx + λy.
+
+<!-- correct -->
 
 15. Show that (a + b)x = ax + bx for all a, b ∈ 𝐅 and all x ∈ 𝐅ⁿ.
 
-<!-- pending -->
+<!-- skipped -->
 
 # Exercises 1B, page 16
 

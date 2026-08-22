@@ -2,19 +2,16 @@
 
 ## Current position
 
-Chapter 1 (Vector Spaces), starting Exercises 1A.
-
-`ch01/definitions.md` and `ch01/exercises.md` are set up. All 47 exercises
-(15 + 8 + 24) are `pending`.
+Chapter 1 (Vector Spaces). Exercises 1A done. Next: 1B #1.
 
 ## Log
 
 - 2026-08-22 — Repo first run. Generated the plaintext scan, chapter map, and
-  ch01 definitions + exercises. No exercises attempted yet.
+  ch01 definitions + exercises.
+- 2026-08-23 — Worked 1A #4–15. Skipped: 4, 7, 10, 15.
 
 ## Notes
 
-- Exercises 1A #1–6 are just the proofs of the properties in 1.3 that Axler
-  leaves as exercises; 1A #11–15 are the corresponding 𝐅ⁿ facts. They are
-  mechanical and largely identical in shape — worth doing a couple carefully
-  and then batching the rest.
+- Recurring issue: citing properties of 𝐑 where 𝐅 is needed. 𝐅 is 𝐑 or 𝐂
+  (1.6), so the 𝐂 case has to come from 1.3 / exercises 1–6.
+- 1A #11–15 are mechanical coordinatewise arguments; done at that level.
