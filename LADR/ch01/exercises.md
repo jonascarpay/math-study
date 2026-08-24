@@ -2,49 +2,46 @@
 
 1. Show that α + β = β + α for all α, β ∈ 𝐂.
 
-Write α = a + bi and β = c + di with a, b, c, d ∈ 𝐑. By the definition of
-addition on 𝐂 (1.1),
+Write α = a + bi and β = c + di with a, b, c, d ∈ 𝐑. Complex numbers are
+ordered pairs, so equality is coordinatewise.
 
-    α + β = (a + c) + (b + d)i,
-    β + α = (c + a) + (d + b)i.
-
-Since addition on 𝐑 is commutative, a + c = c + a and b + d = d + b. Complex
-numbers are ordered pairs, so equality is coordinatewise, and therefore
-
-    α + β = (a + c) + (b + d)i = (c + a) + (d + b)i = β + α.
+    α + β = (a + c) + (b + d)i     (1.1)
+          = (c + a) + (d + b)i     (commutativity of addition on 𝐑)
+          = β + α                  (1.1)
 
 <!-- correct -->
 
 2. Show that (α + β) + λ = α + (β + λ) for all α, β, λ ∈ 𝐂.
 
-Write α = a + bi, β = c + di, λ = e + fi with a, …, f ∈ 𝐑. Applying the
-definition of addition on 𝐂 (1.1) twice on each side,
+Write α = a + bi, β = c + di, λ = e + fi with a, …, f ∈ 𝐑.
 
-    (α + β) + λ = ((a + c) + e) + ((b + d) + f)i,
-    α + (β + λ) = (a + (c + e)) + (b + (d + f))i.
-
-Addition on 𝐑 is associative, so the real parts agree and the imaginary parts
-agree, hence the two are equal.
+    (α + β) + λ = ((a + c) + e) + ((b + d) + f)i   (1.1, twice)
+                = (a + (c + e)) + (b + (d + f))i   (associativity of addition
+                                                    on 𝐑)
+                = α + (β + λ)                      (1.1, twice)
 
 <!-- correct -->
 
 3. Show that (αβ)λ = α(βλ) for all α, β, λ ∈ 𝐂.
 
-Write α = a + bi, β = c + di, λ = e + fi with a, …, f ∈ 𝐑. Applying the
-definition of multiplication on 𝐂 (1.1) twice on each side and expanding:
+Write α = a + bi, β = c + di, λ = e + fi with a, …, f ∈ 𝐑.
 
-    αβ = (ac − bd) + (ad + bc)i,
-    (αβ)λ = [(ac − bd)e − (ad + bc)f] + [(ac − bd)f + (ad + bc)e]i
+    αβ    = (ac − bd) + (ad + bc)i                              (1.1)
+    (αβ)λ = [(ac − bd)e − (ad + bc)f]
+              + [(ac − bd)f + (ad + bc)e]i                      (1.1)
           = (ace − bde − adf − bcf) + (acf − bdf + ade + bce)i;
 
-    βλ = (ce − df) + (cf + de)i,
-    α(βλ) = [a(ce − df) − b(cf + de)] + [a(cf + de) + b(ce − df)]i
+    βλ    = (ce − df) + (cf + de)i                              (1.1)
+    α(βλ) = [a(ce − df) − b(cf + de)]
+              + [a(cf + de) + b(ce − df)]i                      (1.1)
           = (ace − adf − bcf − bde) + (acf + ade + bce − bdf)i.
 
-Using associativity and commutativity of multiplication on 𝐑, the real parts
-consist of the same four terms ace, −bde, −adf, −bcf, and the imaginary parts
-of the same four terms acf, −bdf, ade, bce. Equality in 𝐂 is coordinatewise,
-so (αβ)λ = α(βλ).
+By associativity and commutativity of multiplication on 𝐑, both real parts
+consist of the same four terms ace, −bde, −adf, −bcf, and both imaginary
+parts of the same four terms acf, −bdf, ade, bce. Equality in 𝐂 is
+coordinatewise, so
+
+    (αβ)λ = α(βλ).
 
 <!-- correct -->
 
@@ -54,23 +51,25 @@ so (αβ)λ = α(βλ).
 
 5. Show that for every α ∈ 𝐂, there exists a unique β ∈ 𝐂 such that α + β = 0.
 
-Let α = a₁ + a₂i and β = b₁ + b₂i with a₁, a₂, b₁, b₂ ∈ 𝐑. By 1.1,
+Let α = a₁ + a₂i and β = b₁ + b₂i with a₁, a₂, b₁, b₂ ∈ 𝐑, and 0 = 0 + 0i.
+Complex numbers are ordered pairs, so equality is coordinatewise.
 
-    α + β = (a₁ + b₁) + (a₂ + b₂)i,
-
-and 0 = 0 + 0i. Complex numbers are ordered pairs, so equality is
-coordinatewise:
-
-    α + β = 0  ⟺  a₁ + b₁ = 0 and a₂ + b₂ = 0.
+    α + β = (a₁ + b₁) + (a₂ + b₂)i                      (1.1)
+    α + β = 0  ⟺  a₁ + b₁ = 0 and a₂ + b₂ = 0
 
 So the condition on β is exactly that b₁, b₂ are additive inverses of a₁, a₂
 in 𝐑.
 
-Existence: take b₁ = −a₁ and b₂ = −a₂, which exist in 𝐑.
+Existence:
 
-Uniqueness: suppose γ = c₁ + c₂i also satisfies α + γ = 0. Then a₁ + b₁ =
-0 = a₁ + c₁ and a₂ + b₂ = 0 = a₂ + c₂, so by uniqueness of additive inverses
-in 𝐑 we get b₁ = c₁ and b₂ = c₂, hence β = γ.
+    b₁ = −a₁, b₂ = −a₂                                  (exist in 𝐑)
+
+Uniqueness: suppose γ = c₁ + c₂i also satisfies α + γ = 0.
+
+    a₁ + b₁ = 0 = a₁ + c₁  ⇒  b₁ = c₁                   (uniqueness of
+    a₂ + b₂ = 0 = a₂ + c₂  ⇒  b₂ = c₂                    additive inverses
+                                                         in 𝐑)
+    ⇒ β = γ
 
 <!-- correct -->
 
@@ -80,20 +79,22 @@ in 𝐑 we get b₁ = c₁ and b₂ = c₂, hence β = γ.
 Let α = a₁ + a₂i with a₁, a₂ ∈ 𝐑, and write s = a₁² + a₂².
 
 Existence: since α ≠ 0, a₁ and a₂ are not both 0; squares in 𝐑 are ≥ 0, so
-s > 0 and 1/s ∈ 𝐑. Take β to be the conjugate of α scaled by 1/s,
+s > 0 and 1/s ∈ 𝐑. Take β to be the conjugate of α scaled by 1/s.
 
-    β = (a₁/s) + (−a₂/s)i.
-
-By 1.1,
-
-    αβ = (a₁·(a₁/s) − a₂·(−a₂/s)) + (a₁·(−a₂/s) + a₂·(a₁/s))i
+    β  = (a₁/s) + (−a₂/s)i
+    αβ = (a₁·(a₁/s) − a₂·(−a₂/s))
+           + (a₁·(−a₂/s) + a₂·(a₁/s))i          (1.1)
        = ((a₁² + a₂²)/s) + 0i
-       = 1 + 0i = 1.
+       = 1 + 0i
+       = 1
 
-Uniqueness: suppose αβ = αγ = 1. Then, using commutativity and associativity
-of multiplication on 𝐂 (1.3, and exercise 3) and λ1 = λ,
+Uniqueness: suppose αβ = αγ = 1.
 
-    γ = γ(αβ) = (γα)β = (αγ)β = 1β = β.
+    γ = γ(αβ)
+      = (γα)β                                   (associativity, exercise 3)
+      = (αγ)β                                   (commutativity, 1.3)
+      = 1β
+      = β                                       (λ1 = λ)
 
 <!-- correct -->
 
@@ -107,13 +108,14 @@ of multiplication on 𝐂 (1.3, and exercise 3) and λ1 = λ,
 
 8. Find two distinct square roots of i.
 
-    ±(1/√2 + (1/√2)i).
+    ±(1/√2 + (1/√2)i)
 
-Check, by 1.1:
+Check:
 
-    (1/√2 + (1/√2)i)² = (1/2 − 1/2) + (1/2 + 1/2)i = i,
-
-and the square of the negative is the same.
+    (1/√2 + (1/√2)i)²    = (1/2 − 1/2) + (1/2 + 1/2)i     (1.1)
+                         = i
+    (−(1/√2 + (1/√2)i))² = (1/√2 + (1/√2)i)²
+                         = i
 
 <!-- correct -->
 
@@ -124,7 +126,9 @@ and the square of the negative is the same.
 Addition and scalar multiplication in 𝐑⁴ are coordinatewise, so 2xₖ is the
 difference of the corresponding coordinates:
 
-    x = (1/2, 6, −7/2, 1/2).
+    2x = (5 − 4, 9 − (−3), −6 − 1, 8 − 7)
+       = (1, 12, −7, 1)
+    x  = (1/2, 6, −7/2, 1/2)
 
 <!-- correct -->
 
@@ -137,37 +141,57 @@ difference of the corresponding coordinates:
 11. Show that (x + y) + z = x + (y + z) for all x, y, z ∈ 𝐅ⁿ.
 
 Write x = (x₁, …, xₙ), y = (y₁, …, yₙ), z = (z₁, …, zₙ) with all coordinates
-in 𝐅. Addition in 𝐅ⁿ is coordinatewise (1.12), so for each k ∈ {1, …, n} the
-k-th coordinate of (x + y) + z is (xₖ + yₖ) + zₖ and that of x + (y + z) is
-xₖ + (yₖ + zₖ). Addition in 𝐅 is associative (𝐑 by assumption, 𝐂 by exercise
-2), so these agree. Lists are equal iff their coordinates agree, hence
-(x + y) + z = x + (y + z).
+in 𝐅. Addition in 𝐅ⁿ is coordinatewise (1.12), so for each k ∈ {1, …, n}:
+
+    ((x + y) + z)ₖ = (xₖ + yₖ) + zₖ
+                   = xₖ + (yₖ + zₖ)    (associativity of addition in 𝐅:
+                                        𝐑 by assumption, 𝐂 by exercise 2)
+                   = (x + (y + z))ₖ
+
+Lists are equal iff their coordinates agree, hence
+
+    (x + y) + z = x + (y + z).
 
 <!-- correct -->
 
 12. Show that (ab)x = a(bx) for all x ∈ 𝐅ⁿ and all a, b ∈ 𝐅.
 
 Write x = (x₁, …, xₙ). Scalar multiplication in 𝐅ⁿ is coordinatewise (1.13),
-so the k-th coordinate of (ab)x is (ab)xₖ and that of a(bx) is a(bxₖ).
-Multiplication in 𝐅 is associative (𝐑 by assumption, 𝐂 by exercise 3), so
-these agree for every k, hence (ab)x = a(bx).
+so for each k ∈ {1, …, n}:
+
+    ((ab)x)ₖ = (ab)xₖ
+             = a(bxₖ)      (associativity of multiplication in 𝐅:
+                            𝐑 by assumption, 𝐂 by exercise 3)
+             = (a(bx))ₖ
+
+These agree for every k, hence
+
+    (ab)x = a(bx).
 
 <!-- correct -->
 
 13. Show that 1x = x for all x ∈ 𝐅ⁿ.
 
-Write x = (x₁, …, xₙ). By the definition of scalar multiplication in 𝐅ⁿ
-(1.13), 1x = (1x₁, …, 1xₙ). Since 1 is the multiplicative identity of 𝐅,
-1xₖ = xₖ for each k, so 1x = x.
+Write x = (x₁, …, xₙ).
+
+    1x = (1x₁, …, 1xₙ)     (1.13)
+       = (x₁, …, xₙ)       (1 is the multiplicative identity of 𝐅)
+       = x
 
 <!-- correct -->
 
 14. Show that λ(x + y) = λx + λy for all λ ∈ 𝐅 and all x, y ∈ 𝐅ⁿ.
 
 Write x = (x₁, …, xₙ) and y = (y₁, …, yₙ). Addition and scalar multiplication
-in 𝐅ⁿ are coordinatewise (1.12, 1.13), so the k-th coordinate of λ(x + y) is
-λ(xₖ + yₖ) and that of λx + λy is λxₖ + λyₖ. These agree by distributivity in
-𝐅 (1.3), so λ(x + y) = λx + λy.
+in 𝐅ⁿ are coordinatewise (1.12, 1.13), so for each k ∈ {1, …, n}:
+
+    (λ(x + y))ₖ = λ(xₖ + yₖ)
+                = λxₖ + λyₖ      (distributivity in 𝐅, 1.3)
+                = (λx + λy)ₖ
+
+Hence
+
+    λ(x + y) = λx + λy.
 
 <!-- correct -->
 
