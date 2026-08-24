@@ -31,13 +31,13 @@ However, you typically won't need to read it directly, instead using one of two 
 The book-specific CLAUDE.md will typically have more guidance on how to query the text.
 If a text has page numbers, always use the page numbers provided by the text, and not the page numbers in the PDF.
 
-### CLAUDE.md
+### `CLAUDE.md`
 Book-specific instructions.
 I will write some of these, but you should augment this yourself with notes to yourself, such as
 - How you generated the plaintext scan (discussed below)
 - How chapters map to PDF pages/lines in the plaintext
 
-### PROGRESS.md
+### `PROGRESS.md`
 A free-form text file for you to log my progress in.
 This is a place for you to log additional information required to know where to pick up next time.
 In general, since the primary piece of state is exercise progress, and exercise progress is already fully tracked in the exercise file itself, this file will not exist.
@@ -84,14 +84,21 @@ All our files (definitions, exercises, etc) will be, as much as possible, in Mar
 I might occasionally edit a file directly, and then I might use shorthand that you should clean up.
 For structural notation for things like matrices, prefer to write them out in ASCII rather than with LaTeX.
 
+The above governs files on disk.
+In conversation, use LaTeX for notation.
+Default to `$...$` for inline mathematics and `$$...$$` for display mathematics (mobile only renders these).
+On desktop I may explicitly request `\( ... \)` / `\[ ... \]`.
+
 ## Version control
 
-I use jujutsu VCS.
-After a logical block of work has finished, ask me if I want to commit to jj, and if so, do that for me.
+We use jujutsu VCS.
+I want you to be proactive in creating commits for logical chunks of work.
+By "commit", I mean to describe the current change if it hasn't been already, and then start a new change.
+
 Keep commit messages (descriptions) short.
 Some examples of blocks of work and associated commit messages:
 
 - "Set up exercises for LADR Ch. 3"
-- "Exercise solutions for LADR Ch. 3"
+- "LADR solutions for exercises 3A"
 
 Under no circumstances should you touch/modify any commits other than `@`.

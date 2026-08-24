@@ -6,7 +6,8 @@
       "Bash(jj st *)",
       "Bash(jj diff *)",
       "Bash(jj describe *)",
-      "Bash(jj new *)"
+      "Bash(jj new *)",
+      "Bash(awk 'BEGIN{p=1} /\\\\f/{p++} p==30' LADR4e.txt)"
     ]
   }
 }

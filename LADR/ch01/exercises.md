@@ -47,7 +47,32 @@ coordinatewise, so
 
 4. Show that λ(α + β) = λα + λβ for all λ, α, β ∈ 𝐂.
 
-<!-- skipped -->
+Write λ = λ_r + λ_i i, α = α_r + α_i i, β = β_r + β_i i with all six
+components in 𝐑. Equality in 𝐂 is coordinatewise.
+
+LHS: α + β = (α_r + β_r) + (α_i + β_i)i (1.1), so
+
+    λ(α + β) = (λ_r(α_r + β_r) − λ_i(α_i + β_i))
+                 + (λ_r(α_i + β_i) + λ_i(α_r + β_r))i     (1.1)
+
+RHS:
+
+    λα = (λ_r α_r − λ_i α_i) + (λ_r α_i + λ_i α_r)i        (1.1)
+    λβ = (λ_r β_r − λ_i β_i) + (λ_r β_i + λ_i β_r)i        (1.1)
+    λα + λβ = (λ_r α_r − λ_i α_i + λ_r β_r − λ_i β_i)
+                + (λ_r α_i + λ_i α_r + λ_r β_i + λ_i β_r)i  (1.1)
+
+Distributing over 𝐑 in the LHS real and imaginary parts:
+
+    λ_r(α_r + β_r) − λ_i(α_i + β_i)
+        = λ_r α_r + λ_r β_r − λ_i α_i − λ_i β_i,
+    λ_r(α_i + β_i) + λ_i(α_r + β_r)
+        = λ_r α_i + λ_r β_i + λ_i α_r + λ_i β_r,
+
+which agree with the corresponding parts of the RHS up to commutativity of
+addition in 𝐑. Hence λ(α + β) = λα + λβ.
+
+<!-- correct -->
 
 5. Show that for every α ∈ 𝐂, there exists a unique β ∈ 𝐂 such that α + β = 0.
 
@@ -104,7 +129,19 @@ Uniqueness: suppose αβ = αγ = 1.
 
    is a cube root of 1 (meaning that its cube equals 1).
 
-<!-- skipped -->
+Let ω = (−1 + √3 i)/2. Direct expansion via 1.1:
+
+    ω²  = (1 − 2√3 i + 3i²)/4
+        = (1 − 3 − 2√3 i)/4
+        = (−2 − 2√3 i)/4
+        = (−1 − √3 i)/2
+    ω³  = ω²·ω
+        = ((−1 − √3 i)/2)·((−1 + √3 i)/2)
+        = (1 − 3i²)/4
+        = (1 + 3)/4
+        = 1
+
+<!-- correct -->
 
 8. Find two distinct square roots of i.
 
@@ -203,22 +240,40 @@ Hence
 
 1. Prove that −(−v) = v for every v ∈ V.
 
-<!-- pending -->
+Consider the sum v + (−v) + (−(−v)), and associate it in the two possible
+ways:
+
+    (v + (−v)) + (−(−v)) = 0 + (−(−v)) = −(−v),
+    v + ((−v) + (−(−v))) = v + 0 = v.
+
+Both use the defining property of the additive inverse (1.28), the additive
+identity, and commutativity. Hence −(−v) = v.
+
+<!-- correct -->
 
 2. Suppose a ∈ 𝐅, v ∈ V, and av = 0. Prove that a = 0 or v = 0.
 
-<!-- pending -->
+If a = 0, the conclusion holds. So suppose a ≠ 0; then 1/a ∈ 𝐅 exists
+(multiplicative inverse, 1.3).
+
+    v = 1v
+      = ((1/a)a)v
+      = (1/a)(av)      (associativity, 1.20)
+      = (1/a)0
+      = 0              (1.31)
+
+<!-- correct -->
 
 3. Suppose v, w ∈ V. Explain why there exists a unique x ∈ V such that
    v + 3x = w.
 
-<!-- pending -->
+<!-- skipped -->
 
 4. The empty set is not a vector space. The empty set fails to satisfy only
    one of the requirements listed in the definition of a vector space (1.20).
    Which one?
 
-<!-- pending -->
+<!-- skipped -->
 
 5. Show that in the definition of a vector space (1.20), the additive inverse
    condition can be replaced with the condition that
@@ -232,7 +287,7 @@ Hence
    > collection of objects satisfying the definition is unchanged if the
    > original condition is replaced with the new condition.
 
-<!-- pending -->
+<!-- skipped -->
 
 6. Let ∞ and −∞ denote two distinct objects, neither of which is in 𝐑. Define
    an addition and scalar multiplication on 𝐑 ∪ {∞, −∞} as you could guess
@@ -252,13 +307,74 @@ Hence
    With these operations of addition and scalar multiplication, is
    𝐑 ∪ {∞, −∞} a vector space over 𝐑? Explain.
 
-<!-- pending -->
+No: associativity of addition is violated.
+
+    ∞ + (∞ + (−∞)) = ∞ + 0 = ∞
+    (∞ + ∞) + (−∞) = ∞ + (−∞) = 0
+
+<!-- correct -->
 
 7. Suppose S is a nonempty set. Let V^S denote the set of functions from S to
    V. Define a natural addition and scalar multiplication on V^S, and show
    that V^S is a vector space with these definitions.
 
-<!-- pending -->
+Define, for f, g ∈ V^S, λ ∈ 𝐅, and all x ∈ S:
+
+    (f + g)(x) = f(x) + g(x)
+    (λf)(x)    = λ(f(x))
+
+where the operations on the right are those of V. Two elements of V^S are
+equal iff they agree at every x ∈ S, so each property of 1.20 is checked
+pointwise.
+
+commutativity:
+
+    (f + g)(x) = f(x) + g(x)
+               = g(x) + f(x)
+               = (g + f)(x)
+
+associativity:
+
+    ((f + g) + h)(x) = (f(x) + g(x)) + h(x)
+                     = f(x) + (g(x) + h(x))
+                     = f(x) + (g + h)(x)
+                     = (f + (g + h))(x)
+
+    ((ab)f)(x) = (ab)(f(x))
+               = a(b(f(x)))
+               = a((bf)(x))
+               = (a(bf))(x)
+
+additive identity: the function 0 ∈ V^S given by 0(x) = 0.
+
+    (f + 0)(x) = f(x) + 0(x)
+               = f(x)
+
+additive inverse: given f ∈ V^S, take w ∈ V^S with w(x) = (−1)(f(x)).
+
+    (f + w)(x) = f(x) + w(x)
+               = f(x) + (−1)(f(x))
+               = 0(f(x))
+               = 0
+
+multiplicative identity:
+
+    (1f)(x) = 1(f(x))
+            = f(x)
+
+distributive properties:
+
+    (a(f + g))(x) = a((f + g)(x))
+                  = a(f(x) + g(x))
+                  = a(f(x)) + a(g(x))
+                  = (af)(x) + (ag)(x)
+                  = (af + ag)(x)
+
+    ((a + b)f)(x) = (a + b)(f(x))
+                  = a(f(x)) + b(f(x))
+                  = (af + bf)(x)
+
+<!-- correct -->
 
 8. Suppose V is a real vector space.
 
@@ -283,7 +399,86 @@ Hence
    > construction of V_𝐂 from V can be thought of as generalizing the
    > construction of 𝐂ⁿ from 𝐑ⁿ.
 
-<!-- pending -->
+Elements of V_𝐂 are ordered pairs, so equality is componentwise: two elements
+agree iff their "real" and "imaginary" components agree in V. All right-hand
+sides below use only the operations of the real vector space V. Verify each
+property of 1.20 (scalars now in 𝐂).
+
+Write z_k = u_k + iv_k throughout the additive properties.
+
+commutativity:
+
+    (u₁ + iv₁) + (u₂ + iv₂) = (u₁ + u₂) + i(v₁ + v₂)
+    (u₂ + iv₂) + (u₁ + iv₁) = (u₂ + u₁) + i(v₂ + v₁)
+
+and u₁ + u₂ = u₂ + u₁, v₁ + v₂ = v₂ + v₁ by commutativity in V.
+
+associativity of addition:
+
+    ((z₁ + z₂) + z₃) has components ((u₁ + u₂) + u₃, (v₁ + v₂) + v₃)
+    (z₁ + (z₂ + z₃)) has components (u₁ + (u₂ + u₃), v₁ + (v₂ + v₃))
+
+equal by associativity of addition in V.
+
+additive identity: 0 + i0, with 0 the additive identity of V.
+
+    (u + iv) + (0 + i0) = (u + 0) + i(v + 0) = u + iv
+
+additive inverse: for u + iv, take (−u) + i(−v), with −u, −v the inverses
+in V.
+
+    (u + iv) + ((−u) + i(−v)) = (u + (−u)) + i(v + (−v)) = 0 + i0
+
+associativity of scalar multiplication: λ = a + bi, μ = c + di, z = u + iv,
+with a, b, c, d ∈ 𝐑.
+
+    ((a + bi)(c + di))(u + iv)
+      = ((ac − bd) + (ad + bc)i)(u + iv)
+      = ((ac − bd)u − (ad + bc)v) + i((ac − bd)v + (ad + bc)u)
+
+    (a + bi)((c + di)(u + iv))
+      = (a + bi)((cu − dv) + i(du + cv))
+      = (a(cu − dv) − b(du + cv)) + i(b(cu − dv) + a(du + cv))
+      = (acu − adv − bdu − bcv) + i(bcu − bdv + adu + acv)
+      = ((ac − bd)u − (ad + bc)v) + i((ac − bd)v + (ad + bc)u)
+
+multiplicative identity: 1 = 1 + 0i.
+
+    1(u + iv) = (1 + 0i)(u + iv)
+              = (1u − 0v) + i(0u + 1v)
+              = u + iv
+
+using 1u = u (multiplicative identity in V) and 0v = 0u = 0 (1.30 in V).
+
+distributive property (a + b)v = av + bv, here (λ + μ)z = λz + μz:
+λ = a + bi, μ = c + di, z = u + iv.
+
+    (λ + μ)z
+      = ((a + c) + (b + d)i)(u + iv)
+      = ((a + c)u − (b + d)v) + i((a + c)v + (b + d)u)
+      = (au + cu − bv − dv) + i(av + cv + bu + du)
+
+    λz + μz
+      = ((au − bv) + i(av + bu)) + ((cu − dv) + i(du + cv))
+      = (au + cu − bv − dv) + i(av + cv + bu + du)
+
+distributive property a(u + v) = au + av, here λ(z₁ + z₂) = λz₁ + λz₂:
+λ = a + bi, z₁ = x + iy, z₂ = u + iv.
+
+    λ(z₁ + z₂)
+      = (a + bi)((x + u) + i(y + v))
+      = (a(x + u) − b(y + v)) + i(b(x + u) + a(y + v))
+      = (ax + au − by − bv) + i(bx + bu + ay + av)
+
+    λz₁ + λz₂
+      = ((ax − by) + i(bx + ay)) + ((au − bv) + i(bu + av))
+      = (ax + au − by − bv) + i(bx + bu + ay + av)
+
+Each real/imaginary component agrees by the distributive and
+associativity/commutativity laws in V, so all properties of 1.20 hold and V_𝐂
+is a complex vector space.
+
+<!-- correct -->
 
 # Exercises 1C, page 24
 
