@@ -490,42 +490,223 @@ is a complex vector space.
    (c) {(x₁, x₂, x₃) ∈ 𝐅³ : x₁x₂x₃ = 0}
    (d) {(x₁, x₂, x₃) ∈ 𝐅³ : x₁ = 5x₃}
 
-<!-- pending -->
+(a) Subspace. Let U = {(x₁, x₂, x₃) ∈ 𝐅³ : x₁ + 2x₂ + 3x₃ = 0}, let x, y ∈ U,
+and let λ ∈ 𝐅.
+
+Additive identity: 0 + 2·0 + 3·0 = 0, so (0, 0, 0) ∈ U.
+
+Closed under addition: x + y = (x₁ + y₁, x₂ + y₂, x₃ + y₃), and
+
+    (x₁ + y₁) + 2(x₂ + y₂) + 3(x₃ + y₃)
+      = (x₁ + 2x₂ + 3x₃) + (y₁ + 2y₂ + 3y₃)   (distributivity, commutativity,
+                                               associativity)
+      = 0 + 0
+      = 0.
+
+Closed under scalar multiplication: λx = (λx₁, λx₂, λx₃), and
+
+    λx₁ + 2λx₂ + 3λx₃
+      = λ(x₁ + 2x₂ + 3x₃)   (distributivity)
+      = λ·0
+      = 0.
+
+(b) Not a subspace: 0 + 2·0 + 3·0 = 0 ≠ 4, so 0 is not in the set, and the
+additive identity condition of 1.34 fails.
+
+(c) Not a subspace. Closure under addition fails:
+
+    1·1·0 = 0 and 0·0·1 = 0, so (1, 1, 0) and (0, 0, 1) are in the set,
+    (1, 1, 0) + (0, 0, 1) = (1, 1, 1),
+    1·1·1 = 1 ≠ 0.
+
+(d) Subspace. x₁ = 5x₃ ⟺ x₁ + 0x₂ − 5x₃ = 0, which is the same shape as (a)
+with coefficients (1, 0, −5) in place of (1, 2, 3), so the argument of (a)
+applies verbatim with those coefficients.
+
+<!-- correct -->
 
 2. Verify all assertions about subspaces in Example 1.35.
 
-<!-- pending -->
+(a) If b = 0, the set is {(x₁, x₂, x₃, x₄) ∈ 𝐅⁴ : x₃ − 5x₄ = 0}, the same
+shape as exercise 1(a) with coefficients (0, 0, 1, −5), so the argument there
+applies verbatim.
+
+If b ≠ 0, then (0, 0, 0, 0) has x₃ = 0 while 5x₄ + b = b ≠ 0, so 0 is not in
+the set and the additive identity condition of 1.34 fails.
+
+(b) Let U be the set of continuous real-valued functions on [0, 1].
+
+    The additive identity of 𝐑^[0,1] is the constant function 0(x) = 0 (1.25),
+      which is continuous, so 0 ∈ U.
+    The sum of two continuous functions is continuous, so f, g ∈ U implies
+      f + g ∈ U.
+    A constant multiple of a continuous function is continuous, so λ ∈ 𝐑 and
+      f ∈ U implies λf ∈ U.
+
+(c) Let U be the set of differentiable real-valued functions on 𝐑. Same
+argument as (b), with differentiability in place of continuity:
+
+    the constant function 0 is differentiable with 0′ = 0, so 0 ∈ U;
+    (f + g)′ = f′ + g′, so f + g is differentiable;
+    (λf)′ = λf′, so λf is differentiable.
+
+(d) Skipped. Partial: (f + g)′(2) = f′(2) + g′(2) forces b = b + b, hence
+b = 0, giving the "only if" direction — but without exhibiting an element of
+the set to apply closure to, and without the "if" direction.
+
+(e) Let U ⊆ 𝐂^∞ be the set of sequences with limit 0.
+
+    The sequence 0 = (0, 0, …) has limit 0, so 0 ∈ U.
+    lim(x + y) = lim x + lim y = 0 + 0 = 0, so x, y ∈ U implies x + y ∈ U.
+    lim(λx) = λ lim x = λ·0 = 0, so λ ∈ 𝐂 and x ∈ U implies λx ∈ U.
+
+<!-- skipped -->
 
 3. Show that the set of differentiable real-valued functions f on the interval
    (−4, 4) such that f′(−1) = 3f(2) is a subspace of 𝐑^(−4,4).
 
-<!-- pending -->
+Let U = {f ∈ 𝐑^(−4,4) : f differentiable, f′(−1) = 3f(2)}.
+
+Additive identity: the constant function 0 is differentiable, and
+
+    0′(−1) = 0 = 3·0 = 3·0(2),
+
+so 0 ∈ U.
+
+Closed under addition: for f, g ∈ U, f + g is differentiable, and
+
+    (f + g)′(−1)
+      = f′(−1) + g′(−1)
+      = 3f(2) + 3g(2)
+      = 3(f(2) + g(2))
+      = 3(f + g)(2),
+
+so f + g ∈ U.
+
+Closed under scalar multiplication: for c ∈ 𝐑 and f ∈ U, cf is
+differentiable, and
+
+    (cf)′(−1)
+      = c·f′(−1)
+      = c·3f(2)
+      = 3(cf)(2),
+
+so cf ∈ U.
+
+<!-- correct -->
 
 4. Suppose b ∈ 𝐑. Show that the set of continuous real-valued functions f on
    the interval [0, 1] such that ∫₀¹ f = b is a subspace of 𝐑^[0,1] if and
    only if b = 0.
 
-<!-- pending -->
+Let U_b = {f ∈ 𝐑^[0,1] : f continuous, ∫₀¹ f = b}.
+
+(⟹) Suppose U_b is a subspace of 𝐑^[0,1]. By 1.34, 0 ∈ U_b, where 0 is the
+constant function 0(x) = 0 (1.25). Hence
+
+    b = ∫₀¹ 0 = 0.
+
+(⟸) Suppose b = 0.
+
+Additive identity: ∫₀¹ 0 = 0 = b, so 0 ∈ U₀.
+
+Closed under addition: let f, g ∈ U₀. Addition preserves continuity, so f + g
+is continuous, and integration distributes over addition:
+
+    ∫₀¹ (f + g)
+      = ∫₀¹ f + ∫₀¹ g
+      = 0 + 0
+      = 0,
+
+so f + g ∈ U₀.
+
+Closed under scalar multiplication: let λ ∈ 𝐑 and f ∈ U₀. Scaling preserves
+continuity, so λf is continuous, and integration commutes with scaling:
+
+    ∫₀¹ λf
+      = λ ∫₀¹ f
+      = λ·0
+      = 0,
+
+so λf ∈ U₀.
+
+<!-- correct -->
 
 5. Is 𝐑² a subspace of the complex vector space 𝐂²?
 
-<!-- pending -->
+No. Since 𝐂² is a complex vector space, 𝐅 = 𝐂, and by 1.33 a subspace must
+carry the same scalar multiplication. So closure under scalar multiplication
+must hold for all a ∈ 𝐂, and it fails:
+
+    (1, 0) ∈ 𝐑²,  i ∈ 𝐂,
+    i(1, 0) = (i, 0) ∉ 𝐑².
+
+<!-- correct -->
 
 6. (a) Is {(a, b, c) ∈ 𝐑³ : a³ = b³} a subspace of 𝐑³?
    (b) Is {(a, b, c) ∈ 𝐂³ : a³ = b³} a subspace of 𝐂³?
 
-<!-- pending -->
+(a) Yes. On 𝐑 the map x ↦ x³ is strictly increasing, hence injective, so
+
+    a³ = b³ ⟺ a = b,
+
+and the set equals {(a, b, c) ∈ 𝐑³ : a − b + 0c = 0}. That is the shape of
+exercise 1(a) with coefficients (1, −1, 0), so the argument there applies
+verbatim.
+
+(b) No. Injectivity fails on 𝐂, and closure under addition fails. Let
+ω = (−1 + √3 i)/2 be the cube root of 1 from exercise 1A.7, and let
+ω̄ = ω² = (−1 − √3 i)/2, so that ω̄³ = (ω³)² = 1. Then
+
+    (ω, 1, 0) and (ω̄, 1, 0) are in the set, since ω³ = 1³ and ω̄³ = 1³,
+    (ω, 1, 0) + (ω̄, 1, 0) = (ω + ω̄, 2, 0) = (−1, 2, 0),
+    (−1)³ = −1 ≠ 8 = 2³.
+
+<!-- correct -->
 
 7. Prove or give a counterexample: If U is a nonempty subset of 𝐑² such that U
    is closed under addition and under taking additive inverses (meaning
    −u ∈ U whenever u ∈ U), then U is a subspace of 𝐑².
 
-<!-- pending -->
+Counterexample: U = 𝐙² = {(m, n) ∈ 𝐑² : m, n ∈ 𝐙}.
+
+    U is nonempty, since (0, 0) ∈ U.
+    (m₁, n₁) + (m₂, n₂) = (m₁ + m₂, n₁ + n₂) ∈ U, so U is closed under
+      addition.
+    −(m, n) = (−m, −n) ∈ U, so U is closed under additive inverses.
+
+But U is not closed under scalar multiplication:
+
+    (1, 1) ∈ U,  0.5 ∈ 𝐑,
+    0.5(1, 1) = (0.5, 0.5) ∉ U.
+
+So U is not a subspace of 𝐑² by 1.34.
+
+<!-- correct -->
 
 8. Give an example of a nonempty subset U of 𝐑² such that U is closed under
    scalar multiplication, but U is not a subspace of 𝐑².
 
-<!-- pending -->
+Take U = {(x, y) ∈ 𝐑² : xy = 0}, the union of the two coordinate axes.
+
+U is nonempty, since (0, 0) ∈ U.
+
+U is closed under scalar multiplication: for λ ∈ 𝐑 and (x, y) ∈ U,
+
+    λ(x, y) = (λx, λy),
+    (λx)(λy) = λ²(xy) = λ²·0 = 0,
+
+so λ(x, y) ∈ U.
+
+U is not closed under addition:
+
+    (1, 0), (0, 1) ∈ U,  since 1·0 = 0 and 0·1 = 0,
+    (1, 0) + (0, 1) = (1, 1),
+    1·1 = 1 ≠ 0.
+
+So U is not a subspace of 𝐑² by 1.34.
+
+<!-- correct -->
 
 9. A function f : 𝐑 → 𝐑 is called _periodic_ if there exists a positive number
    p such that f(x) = f(x + p) for all x ∈ 𝐑. Is the set of periodic functions
