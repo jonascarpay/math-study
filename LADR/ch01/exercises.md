@@ -747,7 +747,34 @@ contradicting the irrationality of π.
 10. Suppose V₁ and V₂ are subspaces of V. Prove that the intersection V₁ ∩ V₂
     is a subspace of V.
 
-<!-- pending -->
+Subset:
+
+    V₁ ⊆ V and V₂ ⊆ V, therefore V₁ ∩ V₂ ⊆ V.
+
+Additive identity:
+
+    0 ∈ V₁ and 0 ∈ V₂, since V₁ and V₂ are both subspaces of V,
+    so 0 ∈ V₁ ∩ V₂.
+
+Closed under addition, for V₁:
+
+    u, w ∈ V₁ ∩ V₂  ⟹  u, w ∈ V₁  ⟹  u + w ∈ V₁   (V₁ is a subspace of V)
+
+Same for V₂. Then
+
+    u + w ∈ V₁ and u + w ∈ V₂  ⟹  u + w ∈ V₁ ∩ V₂.
+
+Closed under scalar multiplication, for V₁, with c ∈ 𝐅:
+
+    u ∈ V₁ ∩ V₂  ⟹  u ∈ V₁  ⟹  cu ∈ V₁   (V₁ is a subspace of V)
+
+Same for V₂. Then
+
+    cu ∈ V₁ and cu ∈ V₂  ⟹  cu ∈ V₁ ∩ V₂.
+
+So V₁ ∩ V₂ is a subspace of V by 1.34.
+
+<!-- correct -->
 
 11. Prove that the intersection of every collection of subspaces of V is a
     subspace of V.
