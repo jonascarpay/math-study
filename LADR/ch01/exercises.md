@@ -550,9 +550,7 @@ argument as (b), with differentiability in place of continuity:
     (f + g)′ = f′ + g′, so f + g is differentiable;
     (λf)′ = λf′, so λf is differentiable.
 
-(d) Skipped. Partial: (f + g)′(2) = f′(2) + g′(2) forces b = b + b, hence
-b = 0, giving the "only if" direction — but without exhibiting an element of
-the set to apply closure to, and without the "if" direction.
+(d) Skipped.
 
 (e) Let U ⊆ 𝐂^∞ be the set of sequences with limit 0.
 
@@ -779,12 +777,59 @@ So V₁ ∩ V₂ is a subspace of V by 1.34.
 11. Prove that the intersection of every collection of subspaces of V is a
     subspace of V.
 
-<!-- pending -->
+Let {Vᵢ : i ∈ I} be a collection of subspaces of V, and let W = ⋂_{i∈I} Vᵢ.
+
+Subset:
+
+    w ∈ W  ⟹  ∀i, w ∈ Vᵢ  ⟹  w ∈ V   (Vᵢ is a subspace of V)
+
+so W ⊆ V.
+
+Additive identity:
+
+    ∀i, 0 ∈ Vᵢ   (Vᵢ is a subspace of V)
+
+so 0 ∈ W.
+
+Closed under addition:
+
+    u, v ∈ W  ⟹  ∀i, u, v ∈ Vᵢ  ⟹  ∀i, u + v ∈ Vᵢ   (Vᵢ is a subspace of V)
+
+so u + v ∈ W.
+
+Closed under scalar multiplication, with c ∈ 𝐅:
+
+    v ∈ W  ⟹  ∀i, v ∈ Vᵢ  ⟹  ∀i, cv ∈ Vᵢ   (Vᵢ is a subspace of V)
+
+so cv ∈ W.
+
+So W is a subspace of V by 1.34.
+
+<!-- correct -->
 
 12. Prove that the union of two subspaces of V is a subspace of V if and only
     if one of the subspaces is contained in the other.
 
-<!-- pending -->
+Let U and W be subspaces of V.
+
+(⇐) Assume U ⊆ W. Then U ∪ W = W, and W is a subspace. The case W ⊆ U is
+symmetric.
+
+(⇒) Assume U ∪ W is a subspace of V. Suppose U ⊄ W and W ⊄ U. Then there
+exists u ∈ U with u ∉ W, and w ∈ W with w ∉ U.
+
+Since U ∪ W is a subspace and u, w ∈ U ∪ W, we have u + w ∈ U ∪ W.
+
+But u + w ∉ U: otherwise
+
+    (−u) + (u + w) = w ∈ U,
+
+contradicting w ∉ U. Same for u + w ∉ W: otherwise (−w) + (u + w) = u ∈ W,
+contradicting u ∉ W.
+
+So u + w ∉ U ∪ W — contradiction. Hence U ⊆ W or W ⊆ U.
+
+<!-- correct -->
 
 13. Prove that the union of three subspaces of V is a subspace of V if and
     only if one of the subspaces contains the other two.
@@ -793,7 +838,7 @@ So V₁ ∩ V₂ is a subspace of V by 1.34.
     > this exercise is not true if we replace 𝐅 with a field containing only
     > two elements.
 
-<!-- pending -->
+<!-- skipped -->
 
 14. Suppose
 
@@ -802,28 +847,50 @@ So V₁ ∩ V₂ is a subspace of V by 1.34.
     Describe U + W using symbols, and also give a description of U + W that
     uses no symbols.
 
-<!-- pending -->
+<!-- skipped -->
 
 15. Suppose U is a subspace of V. What is U + U?
 
-<!-- pending -->
+U + U = U.
+
+⊆: U is a subspace, so closed under addition, hence the sum of two elements
+   of U is still in U.
+
+⊇: u = u + 0, and 0 ∈ U.
+
+<!-- correct -->
 
 16. Is the operation of addition on the subspaces of V commutative? In other
     words, if U and W are subspaces of V, is U + W = W + U?
 
-<!-- pending -->
+Yes.
+
+    U + W = {u + w : u ∈ U, w ∈ W}
+
+    W + U = {w + u : u ∈ U, w ∈ W}
+          = {u + w : u ∈ U, w ∈ W}   (commutativity of addition on V, 1.20)
+
+<!-- correct -->
 
 17. Is the operation of addition on the subspaces of V associative? In other
     words, if V₁, V₂, V₃ are subspaces of V, is
 
         (V₁ + V₂) + V₃ = V₁ + (V₂ + V₃)?
 
-<!-- pending -->
+Yes. Writing vₖ ∈ Vₖ throughout:
+
+    (V₁ + V₂) + V₃ = {(v₁ + v₂) + v₃ : …}
+
+    V₁ + (V₂ + V₃) = {v₁ + (v₂ + v₃) : …}
+                   = {(v₁ + v₂) + v₃ : …}   (associativity of addition on V,
+                                             1.20)
+
+<!-- correct -->
 
 18. Does the operation of addition on the subspaces of V have an additive
     identity? Which subspaces have additive inverses?
 
-<!-- pending -->
+<!-- skipped -->
 
 19. Prove or give a counterexample: If V₁, V₂, U are subspaces of V such that
 
@@ -831,7 +898,14 @@ So V₁ ∩ V₂ is a subspace of V by 1.34.
 
     then V₁ = V₂.
 
-<!-- pending -->
+Counterexample. Take V = 𝐑, U = 𝐑, V₁ = {0}, V₂ = U. Then
+
+    V₁ + U = {0} + U = U   (exercise 18)
+    V₂ + U = U + U = U     (exercise 15)
+
+so V₁ + U = V₂ + U, but V₁ ≠ V₂.
+
+<!-- correct -->
 
 20. Suppose
 
@@ -839,7 +913,7 @@ So V₁ ∩ V₂ is a subspace of V by 1.34.
 
     Find a subspace W of 𝐅⁴ such that 𝐅⁴ = U ⊕ W.
 
-<!-- pending -->
+<!-- skipped -->
 
 21. Suppose
 
@@ -847,7 +921,7 @@ So V₁ ∩ V₂ is a subspace of V by 1.34.
 
     Find a subspace W of 𝐅⁵ such that 𝐅⁵ = U ⊕ W.
 
-<!-- pending -->
+<!-- skipped -->
 
 22. Suppose
 
@@ -856,7 +930,7 @@ So V₁ ∩ V₂ is a subspace of V by 1.34.
     Find three subspaces W₁, W₂, W₃ of 𝐅⁵, none of which equals {0}, such that
     𝐅⁵ = U ⊕ W₁ ⊕ W₂ ⊕ W₃.
 
-<!-- pending -->
+<!-- skipped -->
 
 23. Prove or give a counterexample: If V₁, V₂, U are subspaces of V such that
 
