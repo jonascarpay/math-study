@@ -712,7 +712,37 @@ So U is not a subspace of 𝐑² by 1.34.
    p such that f(x) = f(x + p) for all x ∈ 𝐑. Is the set of periodic functions
    from 𝐑 to 𝐑 a subspace of 𝐑^𝐑? Explain.
 
-<!-- pending -->
+No. Suppose the set of periodic functions were a subspace of 𝐑^𝐑.
+
+Let
+
+    f(x) = sin²(x),
+    g(x) = sin²(πx).
+
+Both are periodic (with periods π and 1 respectively), so f + g is periodic
+by closure under addition.
+
+Since f ≥ 0 and g ≥ 0,
+
+    (f + g)(x) = 0  ⟺  f(x) = 0 and g(x) = 0.
+
+Let p > 0 be a period of f + g. Then
+
+    (f + g)(p) = (f + g)(0) = 0,
+
+so f(p) = 0 and g(p) = 0. Hence
+
+    f(p) = 0  ⟹  p = k₁π  for some k₁ ∈ 𝐙,
+    g(p) = 0  ⟹  p = k₂    for some k₂ ∈ 𝐙,
+
+and since p > 0 we have k₁ ≠ 0. Therefore
+
+    k₁π = k₂,
+    π = k₂/k₁,
+
+contradicting the irrationality of π.
+
+<!-- correct -->
 
 10. Suppose V₁ and V₂ are subspaces of V. Prove that the intersection V₁ ∩ V₂
     is a subspace of V.
