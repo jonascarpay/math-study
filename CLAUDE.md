@@ -78,16 +78,22 @@ This has the associated skill `teaching-loop`, which describes your main loop.
 Whenever I say something like "let's go", or "continue our work", this will be your cue to enter teaching mode.
 Assume that I have read or am reading the text, and you are here to test my knowledge based on the exercises in the book.
 
-## File Format
+## Math formatting
 
-All our files (definitions, exercises, etc) will be, as much as possible, in Markdown with Unicode, with LaTeX as an escape hatch.
-I might occasionally edit a file directly, and then I might use shorthand that you should clean up.
+## Files
+
+All files (definitions, exercises, etc) should be in Markdown with Unicode, with LaTeX as an escape hatch.
 For structural notation for things like matrices, prefer to write them out in ASCII rather than with LaTeX.
 
-The above governs files on disk.
-In conversation, use LaTeX for notation.
-Default to `$...$` for inline mathematics and `$$...$$` for display mathematics (mobile only renders these).
-On desktop I may explicitly request `\( ... \)` / `\[ ... \]`.
+## Responses
+
+In conversation, there are three possible modes: mobile, desktop, and terminal.
+Which one you should use depends on the device I'm using, since each has a different LaTeX backend.
+By default, assume I'm on mobile.
+
+- On _mobile_, use single dollar sign delimited LaTeX (i.e. `$...$`) for inline math, and double dollar sign delimited LaTeX for display math (i.e. `$$...$$`).
+- On _desktop_, use parenthesis-delimited LaTeX (i.e. `\(...\)`) for inline math, and square bracket delimited LaTeX for display math (i.e. `\[...\]`).
+- On _terminal_, exclusively use terminal-compatible Unicode and ASCII.
 
 ## Version control
 
