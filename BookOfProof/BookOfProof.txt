@@ -904,34 +904,34 @@
            then its universal set is often denoted as U. We are now ready to define the
            complement operation.
             Definition 1.6  Let A be a set with a universal set U. The complement
-            of A, denoted A, is the set A=U −A.
+            of A, denoted A̅, is the set A̅=U −A.
                        Book of Proof
            Richard Hammack                Complement                                                           21
                 Example 1.10  If P is the set of prime numbers, then
-                                     P =N−P ={1, 4, 6, 8, 9, 10, 12, . . .}.
-                Thus P is the set of composite numbers and 1.
+                                     P̅ =N−P ={1, 4, 6, 8, 9, 10, 12, . . .}.
+                Thus P̅ is the set of composite numbers and 1.
                 Example 1.11  Let A={(x,x^2) : x∈R} be the graph of the equation y= x^2.
-                Figure 1.6(a) shows A in its universal set R^2. The complement of A is A =
+                Figure 1.6(a) shows A in its universal set R^2. The complement of A is A̅ =
                 R^2−A = {(x, y)∈R^2 : y≠x^2}, illustrated by the shaded area in Figure 1.6(b).
-                                             A                      A
+                                             A                      A̅
                                        (a)                       (b)
                                   Figure 1.6. A set and its complement
                 Exercises for Section 1.6
                1. Let A={4, 3, 6, 7, 1, 9}and B={5, 6, 8, 4} have universal setU ={0, 1, 2, . . . , 10}. Find:
-                  (a) A                   (d) A∪A               (g) A−B
-                  (b) B                   (e) A−A               (h) A∩B
-                  (c) A∩A               (f) A−B                (i) A∩B
+                  (a) A̅                   (d) A∪A̅               (g) A̅−B̅
+                  (b) B̅                   (e) A−A̅               (h) A̅∩B
+                  (c) A∩A̅               (f) A−B̅                (i) ‾(A̅∩B)
                2. Let A={0, 2, 4, 6, 8} and B={1, 3, 5, 7} have universal set U = {0, 1, 2, . . . , 8}. Find:
-                  (a) A                   (d) A∪A               (g) A∩B
-                  (b) B                   (e) A−A               (h) A∩B
-                  (c) A∩A               (f) A∪B                (i) A×B
+                  (a) A̅                   (d) A∪A̅               (g) A̅∩B̅
+                  (b) B̅                   (e) A−A̅               (h) ‾(A∩B)
+                  (c) A∩A̅               (f) ‾(A∪B)                (i) A̅×B
                3. Sketch the set X =[1, 3]×[1, 2]on the plane R^2. On separate drawings, shade in
-                  the sets X and X∩([0, 2]×[0, 3]).
+                  the sets X̅ and X̅∩([0, 2]×[0, 3]).
                4. Sketch the set X =[−1, 3]×[0, 2]on the plane R^2. On separate drawings, shade in
-                  the sets X and X∩([−2, 4]×[−1, 3]).
+                  the sets X̅ and X̅∩([−2, 4]×[−1, 3]).
                5. Sketch the set X ={(x,y)∈ R^2 : 1≤ x^2+ y^2 ≤4} on the plane R^2. On a separate
-                  drawing, shade in the set X.
-               6. Sketch the set X ={(x,y)∈R^2: y<x^2} on R^2. Shade in the set X.
+                  drawing, shade in the set X̅.
+               6. Sketch the set X ={(x,y)∈R^2: y<x^2} on R^2. Shade in the set X̅.
                                                                        Free PDF version           22                                                                    Sets
            1.7 Venn Diagrams
            In thinking about sets, it is sometimes helpful to draw informal, schematic
@@ -1005,7 +1005,7 @@
               In the next section we will study types of expressions that use only ∪ or
            only ∩. These expressions will not require the use of parentheses.
            Exercises for Section 1.7
-          1. Draw a Venn diagram for A, where A is a subset of a universal set U.
+          1. Draw a Venn diagram for A̅, where A is a subset of a universal set U.
           2. Draw a Venn diagram for B−A.
           3. Draw a Venn diagram for (A−B)∩C.
           4. Draw a Venn diagram for (A∪B)−C.
@@ -1013,10 +1013,10 @@
              do you think A∪(B∩C) = (A∪B)∩(A∪C)?
           6. Draw Venn diagrams for A∩(B∪C)and (A∩B)∪(A∩C). Based on your drawings,
              do you think A∩(B∪C) = (A∩B)∪(A∩C)?
-          7. Suppose sets A and B are in a universal set U. Draw Venn diagrams for A∩B
-             and A∪B. Based on your drawings, do you think it’s true that A∩B = A∪B?
-          8. Suppose sets A and B are in a universal set U. Draw Venn diagrams for A∪B
-             and A∩B. Based on your drawings, do you think it’s true that A∪B = A∩B?
+          7. Suppose sets A and B are in a universal set U. Draw Venn diagrams for ‾(A∩B)
+             and A̅∪B̅. Based on your drawings, do you think it’s true that ‾(A∩B) = A̅∪B̅?
+          8. Suppose sets A and B are in a universal set U. Draw Venn diagrams for ‾(A∪B)
+             and A̅∩B̅. Based on your drawings, do you think it’s true that ‾(A∪B) = A̅∩B̅?
           9. Draw a Venn diagram for (A∩B)−C.
          10. Draw a Venn diagram for (A−B)∪C.
            Following are Venn diagrams for expressions involving sets A, B and C. Write a
@@ -1435,7 +1435,7 @@
                 that has been proved true is a statement. The quadratic formula and the
                 Pythagorean theorem are both statements:
                                                                                √
-                                                      _2                   −b±  b^2 −4ac
+                                                      _2                   −b±  (b^2 −4ac)
                   P :  The solutions of the equation ax +bx+c=0 are x=               .
                                                                                 2a
                   Q:  If a right triangle has legs of lengths a and b and hypotenuse of
@@ -1607,7 +1607,7 @@
           6. There is a quiz scheduled for Wednesday or Friday.
           7. The number x equals zero, but the number y does not.
           8. At least one of the numbers x and y equals 0.
-          9. x∈A−B             10. x∈A∪B             11. A∈{X ∈𝒫(N) : |X| < ∞}
+          9. x∈A−B             10. x∈A∪B             11. A∈{X ∈𝒫(N) : |X̅| < ∞}
          12. Happy families are all alike, but each unhappy family is unhappy in its own way.
              (Leo Tolstoy, Anna Karenina)
          13. Human beings want to be good, but not too good, and not all the time.
@@ -2809,13 +2809,13 @@
            method, the subtraction principle. To set
            it up, imagine that a set X is a subset of a                      X
            universal set U, as shown on the right.          U −X
-           The complement X = U − X is shaded.
+           The complement X̅ = U − X is shaded.
            Suppose we wanted to count the things
            in this shaded region. Surely this is the number of things in U minus
            the number of things in X, which is to say |U−X|= |U| − |X|. That is the
            subtraction principle.
                Fact 3.3  (Subtraction Principle)
-               If X is a subset of a finite set U, then |X|= |U| − |X|.
+               If X is a subset of a finite set U, then |X̅|= |U| − |X|.
                In other words, if X ⊆U then |U−X|= |U| − |X|.
               The subtraction principle is used in situations where it is easier to count
            the things in some set U that we wish to exclude from consideration than
@@ -4011,7 +4011,7 @@
            thus equal. Therefore for the rest of the proof we can assume 0≤k ≤n.
               The left-hand side binom(n,k)is the number ofk-element subsets ofS ={1, 2, . . . ,n}.
            Every k-element subset X ⊆ S pairs with a unique (n−k)-element subset
-           X =S−X ⊆S. Thus the number of k-element subsets of S equals the number
+           X̅ =S−X ⊆S. Thus the number of k-element subsets of S equals the number
            of (n−k)-element subsets of S, which is to say binom(n,k)=(n/(n−k)).
               We could also derive binom(n,k)=(n/(n−k)) by using the formula for binom(n,k) and quickly
            get
@@ -4426,7 +4426,7 @@
                 will see in our next proposition.                  √
                    That proposition will concern the expression 2  x y≤ x+ y. Notice when
                 you substitute random positive values for the variables, the expression is√       √
-                true. For example, for x= 6 and y=4, the left side is 2  6·4 =4  6 ≈9.79,
+                true. For example, for x= 6 and y=4, the left side is 2  (6·4) =4  6 ≈9.79,
                 which is less than the right side 6+4 =10. Is it true that 2√x y≤x+ y for
                 any positive x and y? How could we prove it?
                    To see how, let’s first cast this into the form of a conditional statement:√
@@ -4450,7 +4450,7 @@
                 Previously we proved that such an inequality still holds after taking the√
                 square root of both sides; doing so produces 2  x y≤x+y.                ■
                    Notice that in the last step of the proof we took the square root of both
-                sides of 4x y ≤(x+y)^2 and got p4x y ≤p(x+y)^2, and the fact that this did
+                sides of 4x y ≤(x+y)^2 and got √(4x y) ≤√((x+y)^2), and the fact that this did
                 not reverse the symbol ≤ followed from our previous proposition. This is an
                 important point. Often the proof of a proposition or theorem uses another
                 proposition or theorem (that has already been proved).
@@ -5172,7 +5172,7 @@
                curve x^2+y^2−3=0. Use this fact to show that  3 is irrational.
            22. Explain why x^2+y^2−3 =0 not having any rational solutions (Exercise 20)
                implies x^2+y^2−3^k=0 has no rational solutions for k an odd, positive integer.
-           23. Use the above result to prove that p3^k is irrational for all odd, positive k.
+           23. Use the above result to prove that √(3^k) is irrational for all odd, positive k.
            24. The number log_23 is irrational.
                        Book of Proof
            Richard Hammack                                                                         Part III
@@ -5535,7 +5535,7 @@
                                       A∪B  =  {x : (x∈ A)∨(x∈B)},
                                       A∩B  =  {x : (x∈ A)∧(x∈B)},
                                       A−B  =  {x : (x∈ A)∧(x∉B)},
-                                          A  =  U −A.
+                                          A̅  =  U −A.
                 Recall that A ⊆B means that every element of A is also an element of B.
                 Also, the power set of A is the set of all subsets of A:
                                       𝒫(A)  =  {X : X ⊆ A}.
@@ -5798,8 +5798,8 @@
                 law that you may actually use fairly often as you continue with mathematics.
                 Some similar equations are listed below. Each of these can be proved with
                 this section’s techniques, and the exercises will ask that you do so.
-                                        A∩B= A∪B )
-                                        A∪B= A∩B     DeMorgan’s laws for sets
+                                        ‾(A∩B)= A̅∪B̅ )
+                                        ‾(A∪B)= A̅∩B̅     DeMorgan’s laws for sets
                          A∩(B∪C)=(A∩B)∪(A∩C)
                          A∪(B∩C)=(A∪B)∩(A∪C)
                          A×(B∪C)=(A×B)∪(A×C)    Distributive laws for sets
@@ -6025,8 +6025,8 @@
                7. Suppose A,B and C are sets. If B⊆C, then A×B⊆A×C.
                8. If A,B and C are sets, then A∪(B∩C)=(A∪B)∩(A∪C).
                9. If A,B and C are sets, then A∩(B∪C)=(A∩B)∪(A∩C).
-              10. If A and B are sets in a universal setU, then A∩B=A∪B.
-              11. If A and B are sets in a universal setU, then A∪B=A∩B.
+              10. If A and B are sets in a universal setU, then ‾(A∩B)=A̅∪B̅.
+              11. If A and B are sets in a universal setU, then ‾(A∪B)=A̅∩B̅.
               12. If A,B and C are sets, then A−(B∩C)=(A−B)∪(A−C).
               13. If A,B and C are sets, then A−(B∪C)=(A−B)∩(A−C).
               14. If A,B and C are sets, then (A∪B)−C=(A−C)∪(B−C).
@@ -6888,9 +6888,9 @@
              If     , then 1·2  2·3  3·4  4·5      n(n+1)     n+1.
          16. Prove that 2^n+1≤3^n for every positive integer n.
          17. Suppose A_1,A_2, . . .A_n are sets in some universal set U, and n ≥2. Prove that
-             A_1∩A_2∩ · · · ∩A_n = A_1∪A_2∪ · · · ∪A_n.
+             ‾(A_1∩A_2∩ · · · ∩A_n) = ‾(A_1)∪‾(A_2)∪ · · · ∪‾(A_n).
          18. Suppose A_1,A_2, . . .A_n are sets in some universal set U, and n ≥2. Prove that
-             A_1∪A_2∪ · · · ∪A_n = A_1∩A_2∩ · · · ∩A_n.
+             ‾(A_1∪A_2∪ · · · ∪A_n) = ‾(A_1)∩‾(A_2)∩ · · · ∩‾(A_n).
          19. Prove that 1 +1 +1+ · · · + 1 ≤2− 1 for every n∈N.
                        1  4  9      n^2     n
          20. Prove that (1+2+3+ · · · +n)^2=1^3+2^3+3^3+ · · · +n^3 for every n∈N.
@@ -8061,7 +8061,7 @@
              Is it surjective? Bijective? Explain.
          13. Consider the function f :R^2 →R^2 defined by the formula f(x,y)= (x y,x^3). Is f
              injective? Is it surjective? Bijective? Explain.
-         14. Consider the function θ :𝒫(Z)→𝒫(Z) defined as θ(X)= X. Is θ injective? Is it
+         14. Consider the function θ :𝒫(Z)→𝒫(Z) defined as θ(X)= X̅. Is θ injective? Is it
              surjective? Bijective? Explain.
          15. This question concerns functions f :{A,B,C,D,E,F,G} →{1, 2, 3, 4, 5, 6, 7}. How
              many such functions are there? How many of these functions are injective? How
@@ -8253,9 +8253,9 @@
              g:A→ A be the function g={(1, 3), (2, 1), (3, 2)}. Find g◦f and f ◦g.
           4. Suppose A={a,b,c}. Let f : A→A be the function f ={(a,c), (b,c), (c,c)}, and let
              g:A→ A be the function g={(a,a), (b,b), (c,a)}. Find g◦f and f ◦g.
-          5. Consider the functions f,g :R→R defined as f(x)=√^3 x+1and g(x)=x^3. Find the
+          5. Consider the functions f,g :R→R defined as f(x)=√^3 (x+1)and g(x)=x^3. Find the
              formulas for g◦f and f ◦g.
-          6. Consider the functions f,g:R→R defined as f(x)= 1/(x2+1) and g(x)=3x+2. Find
+          6. Consider the functions f,g:R→R defined as f(x)= 1/((x2+1)) and g(x)=3x+2. Find
              the formulas for g◦f and f ◦g.
           7. Consider the functions f,g : Z×Z → Z×Z defined as f(m,n) = (mn,m^2) and
              g(m,n)=(m+1,m+n). Find the formulas for g◦ f and f ◦g.
@@ -8342,11 +8342,11 @@
            Example 12.11  The function f :R→R defined as f(x)= x^3+1 is bijective.
            Find its inverse.
               We begin by writing y= x^3+1. Now interchange variables to obtain√
-           x= y^3+1. Solving for y produces y= ^3 x−1. Thus
+           x= y^3+1. Solving for y produces y= ^3 (x−1). Thus
                                                  √_3
-                                         f^{−1}(x)=  x−1.
+                                         f^{−1}(x)=  (x−1.)
            (You can check your answer by computing
-                              f^{−1}(f(x))=p^3 f(x)−1 =p^3 x^3 +1−1=x.
+                              f^{−1}(f(x))=√^3 (f(x)−1) =√^3 (x^3 +1−1)=x.
            Therefore f^{−1}(f(x))= x. Any answer other than x indicates a mistake.)
                        Book of Proof
            Richard Hammack                Inverse Functions                                                     241
@@ -8381,7 +8381,7 @@
                   is bijective. Find its inverse.
                7. Show that the function f :R^2→R^2 defined by the formula f(x,y)= ((x^2+1)y,x^3) is
                   bijective. Then find its inverse.
-               8. Is the function θ:𝒫(Z)→𝒫(Z)defined as θ(X)= X bijective? If so, find θ^{−1}.
+               8. Is the function θ:𝒫(Z)→𝒫(Z)defined as θ(X)= X̅ bijective? If so, find θ^{−1}.
                9. Consider the function f :R×N→N×R defined as f(x,y)=(y, 3x y). Check that this
                   is bijective; find its inverse.           _n
               10.          f :N→Z          f(n)= (−1) (2n−1)+1
@@ -8804,13 +8804,13 @@
            0< |x−c| <δ implies |^{f(x)}− ^L |<ε. With this in mind, notice that
                                |^{g(x)M}|
                    |f(x)   L |  |M f(x)−L g(x)|  |(M f(x)−LM)−(L g(x)−LM)|
-                   |g(x) − M|=|    M g(x)    |=|           M g(x)           |
+                   |g(x) − M̅|=|    M g(x)    |=|           M g(x)           |
                              =|  1  (f(x)−L)−   L   (g(x)−M)|
                                | g(x)           M g(x)          |
                              ≤|  1  (f(x)−L)|+|   L   (g(x)−M)|
                                | g(x)         |  |M g(x)          |
                              =   1   ·|f(x)−L|+   1   ·| L |·|g(x)−M|.            (A)
-                               |g(x)| |       |  |g(x)| |M| |        |
+                               |g(x)| |       |  |g(x)| |M̅| |        |
            Because lim_{x→c} f(x)=L and lim_{x→c} g(x)= M, we can make the terms |f(x)−L| and
            |_M^L|·|g(x)−M| in (A) arbitrarily small by making |x−c| sufficiently small.
            To deal with the factor 1/(|g(x)|), choose δ^′ > 0 so that 0 < |x− c| < δ^′ implies
@@ -8819,18 +8819,18 @@
            That is, |g(x)|> (|M|)/2, and consequently 1/(|g(x)|) < 2/(|M|). Replacing the occurrences
            of 1/(|g(x)|) in (A) with the larger value 2/(|M|), we get
                           | f(x) − L |<  2  ·|f(x)−L|+|2L |·|g(x)−M|,
-                          |g(x)   M|  |M| |       |  |M^2| |        |             (B)
+                          |g(x)   M̅|  |M| |       |  |‾(M^2)| |        |             (B)
            which holds provided 0< |x−c| <δ^′. Two cases finish the proof.
            Case 1. Suppose L≠0. Choose δ^{′′}>0 so 0 < |x−c| <δ^{′′} implies |f(x)−L|< (ε|M|)/4.
            Also choose δ^{′′′} > 0 so that 0 < |x−c| < δ^{′′′} implies |g(x)−M| < ε|_{4L}^{M2}|. Put
                                                               |        |    |   |
            δ=min{δ^′,δ^{′′},δ^{′′′}}. If 0 < |x−c| <δ, then (B) yields
                         |f(x)   L |    2   ε|M|  | 2L | ε|M^2|   ε  ε   ε
-                        |g(x) − M| < |M| ·  4  +|M^2|· | 4L |= 2 + 2 = .
+                        |g(x) − M̅| < |M| ·  4  +|‾(M^2)|· | ‾(4L) |= 2 + 2 = .
            Case 2.  Suppose L = 0. Let δ^{′′} > 0 be such that 0 < |x−c| < δ^{′′} implies
            |f(x)−L|< (ε|M|)/2. Putting δ=min{δ^′,δ^{′′}}, the inequality (B) becomes
                                    | f(x)   L |    2  ε|M|  ε
-                                   |g(x) − M| < |M|  2  = .
+                                   |g(x) − M̅| < |M|  2  = .
            In each case we have shown that for any ε> 0, there is a δ>0 for which
            0< |x−c| <δ implies |^{f(x)}− ^L |<ε, so the proof is finished.                ■
                                |^{g(x)M}|
@@ -8942,7 +8942,7 @@
            Exercises for Section 13.5
                                         √
           1. Prove that the function f(x)=  xis continuous at any number c>0. Deduce that
-             lim_{x→c}pg(x)=qlim_{x→c} g(x), provided lim_{x→c} g(x) exists and is greater than zero.
+             lim_{x→c}√(g(x))=√(lim_{x→c} g(x)), provided lim_{x→c} g(x) exists and is greater than zero.
           2. Show that the condition of continuity in Theorem 13.9 is necessary by finding
              functions f and g for which lim_{x→c}g(x)=L, and f is not continuous at x=L, and
              lim_{x→c}f(g(x))≠f (lim_{x→c}g(x)).
@@ -10290,14 +10290,14 @@
              hand set, but not the left-hand set.
            Section 1.6
           1. Suppose A={4, 3, 6, 7, 1, 9}andB={5, 6, 8, 4}have universal setU ={n∈Z: 0≤n≤10}.
-             (a) A= {0, 2, 5, 8, 10}                  (f) A−B= {4, 6}
-             (b) B= {0, 1, 2, 3, 7, 9, 10}               (g) A−B= {5, 8}
-             (c) A∩A= ∅
-                                                 (h) A∩B= {5, 8}
-             (d) A∪A= {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}=U
-             (e) A−A= A                        (i) A∩B={0, 1, 2, 3, 4, 6, 7, 9, 10}
+             (a) A̅= {0, 2, 5, 8, 10}                  (f) A−B̅= {4, 6}
+             (b) B̅= {0, 1, 2, 3, 7, 9, 10}               (g) A̅−B̅= {5, 8}
+             (c) A∩A̅= ∅
+                                                 (h) A̅∩B= {5, 8}
+             (d) A∪A̅= {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}=U
+             (e) A−A̅= A                        (i) ‾(A̅∩B)={0, 1, 2, 3, 4, 6, 7, 9, 10}
           3. Sketch the set X =[1, 3]×[1, 2] on the plane R^2. On separate drawings, shade in
-             the sets_3    X, and X∩_3([0, 2]×[0, 3]).  _3
+             the sets_3    X̅, and X̅∩_3([0, 2]×[0, 3]).  _3
                 2             2             2
                        X
                 1             1             1
@@ -10308,13 +10308,13 @@
                 1             1             1
                −             −             −
           5. Sketch the set X = {(x,y)∈R^2: 1≤x^2+ y^2≤4} on the plane R^2. On a separate
-             drawing, shade in the set_{33}     X.
+             drawing, shade in the set_{33}     X̅.
                  ^{12X12X}                                     A
                      _{1 2 31 2 3}                             U
-                                                                         A (shaded)
+                                                                         A̅ (shaded)
                  Solution of 1.6, #5.                                Solution of 1.7, #1.
            Section 1.7
-          1. Draw a Venn diagram for A (solution above right).
+          1. Draw a Venn diagram for A̅ (solution above right).
           3. Draw a Venn diagram for (A−B)∩C.
               Scratch work is shown on the right. The set
               A−B is indicated with vertical shading. The         C             C
@@ -10334,12 +10334,12 @@
                    illustrated on the right. Based on this, we are
                    inclined to say that the equation A∪(B∩C) =
                    (A∪B)∩(A∪C) holds for all sets A, B and C.      A          B
-               7. Suppose sets A and B are in a universal setU. Draw Venn diagrams for A∩B
-                  and A∪B. Based on your drawings, do you think it’s true that A∩B = A∪B?
-                   The diagrams for A∩B and A∪B look exactly                 U
+               7. Suppose sets A and B are in a universal setU. Draw Venn diagrams for ‾(A∩B)
+                  and A̅∪B̅. Based on your drawings, do you think it’s true that ‾(A∩B) = A̅∪B̅?
+                   The diagrams for ‾(A∩B) and A̅∪B̅ look exactly                 U
                    alike. In either case the diagram is the shaded
                    region illustrated on the right. Thus we would     A         B
-                   expect that the equation A∩B= A∪B is true for
+                   expect that the equation ‾(A∩B)= A̅∪B̅ is true for
                    any sets A and B.
                9. Venn diagram for (A∩B)−C:       11. The simplest answer is (B∩C)−A.
                              C                     13. One answer is (A∪B∪C)−(A∩B∩C).
@@ -10389,8 +10389,8 @@
              Q: y=0
           9. x∈A−B
              (x∈ A)∧ ∼(x∈B)
-         11. A∈{X ∈𝒫(N) : |X| < ∞}
-             (A⊆N)∧(|A| < ∞).
+         11. A∈{X ∈𝒫(N) : |X̅| < ∞}
+             (A⊆N)∧(|A̅| < ∞).
          13. Human beings want to be good, but not too good, and not all the time.
              P∧ ∼Q∧ ∼R
              P : Human beings want to be good.
@@ -11135,10 +11135,10 @@
                   of binom(p,k) contains a p. Thus binom(p,k) is a multiple of p, so p divides binom(p,k).              ■
               23. If n∈N then binom(2n,n) is even.
                   Proof. By definition, binom(2n,n) is the number of n-element subsets of a set A with 2n
-                  elements. For each subset X ⊆A with |X| =n, the complement X is a different
+                  elements. For each subset X ⊆A with |X| =n, the complement X̅ is a different
                   set, but it also has 2n−n =n elements. Imagine listing out all the n-element
                   subsets of a set A. It could be done in such a way that the list has form
-                                   X_1, X_1, X_2, X_2, X_3, X_3, X_4, X_4, X_5, X_5. . .
+                                   X_1, ‾(X_1), X_2, ‾(X_2), X_3, ‾(X_3), X_4, ‾(X_4), X_5, ‾(X_5). . .
                   This list has an even number of items, for they are grouped in pairs. Thus binom(2n,n)
                   is even.                                                                ■
               25. If a,b,c∈N and c≤b≤a then binom(a,b)binom(b,c)=(a/(b−c))((a−b+c)/c).
@@ -11582,9 +11582,9 @@
              The proof is complete.                                                  ■
                        Book of Proof
            Richard Hammack                                                                                      329
-              11. If A and B are sets in a universal setU, then A∪B=A∩B.
+              11. If A and B are sets in a universal setU, then ‾(A∪B)=A̅∩B̅.
                   Proof. Just observe the following sequence of equalities.
-                   A∪B  =U−(A∪B)                           (def. of complement)
+                   ‾(A∪B)  =U−(A∪B)                           (def. of complement)
                           = {x: (x∈U)∧(x∉ A∪B)}                 (def. of −)
                           = {x: (x∈U)∧ ∼(x∈ A∪B)}
                           = {x: (x∈U)∧ ∼((x∈ A)∨(x∈B))}          (def. of ∪)
@@ -11594,7 +11594,7 @@
                           = {x: ((x∈U)∧(x∉A))∧((x∈U)∧(x∉B))}   (regroup)
                           = {x: (x∈U)∧(x∉ A)}∩{x: (x∈U)∧(x∉B)}  (def. of ∩)
                           = (U −A)∩(U−B)                      (def. of −)
-                          = A∩B                                (def. of complement)
+                          = A̅∩B̅                                (def. of complement)
                   The proof is complete.                                                  ■
               13. If A,B and C are sets, then A−(B∪C)=(A−B)∩(A−C).
                   Proof. Just observe the following sequence of equalities.
@@ -11983,22 +11983,22 @@
                        Book of Proof
            Richard Hammack                                                                                      339
               17. Suppose A_1,A_2, . . .A_n are sets in some universal set U, and n ≥2. Prove that
-                  A_1∩A_2∩ · · · ∩A_n = A_1∪A_2∪ · · · ∪A_n.
+                  ‾(A_1∩A_2∩ · · · ∩A_n) = ‾(A_1)∪‾(A_2)∪ · · · ∪‾(A_n).
                   Proof. The proof is by strong induction.
-                   (1) When n = 2 the statement is A_1∩A_2 = A_1∪ A_2. This is not an entirely
+                   (1) When n = 2 the statement is ‾(A_1∩A_2) = ‾(A_1)∪ ‾(A_2). This is not an entirely
                        obvious statement, so we have to prove it. Observe that
-                         A_1∩A_2  =  {x: (x∈U)∧(x∉ A_1∩A_2)}  (definition of complement)
+                         ‾(A_1∩A_2)  =  {x: (x∈U)∧(x∉ A_1∩A_2)}  (definition of complement)
                                  =  {x: (x∈U)∧ ∼(x∈ A_1∩A_2)}
                                  =  {x: (x∈U)∧ ∼((x∈ A_1)∧(x∈ A_2))} (definition of ∩)
                                  =  {x: (x∈U)∧(∼(x∈ A_1)∨ ∼(x∈ A_2))}  (DeMorgan)
                                  =  {x: (x∈U)∧((x∉A_1)∨(x∉A_2))}
                                  =  {x: (x∈U)∧(x∉ A_1)∨(x∈U)∧(x∉A_2)} (distributive prop.)
                                  =  {x: ((x∈U)∧(x∉A_1))}∪{x: ((x∈U)∧(x∉ A_2))} (def. of ∪)
-                                 =  A_1∪A_2 (definition of complement).
+                                 =  ‾(A_1)∪‾(A_2) (definition of complement).
                    (2) Let k≥2. Assume the statement is true if it involves k or fewer sets. Then
-                           A_1∩A_2∩ · · · ∩A_{k−1}∩A_k∩A_{k+1}  =
-                          A_1∩A_2∩ · · · ∩A_{k−1}∩(A_k∩A_{k+1})  =  A_1∪A_2∪ · · · ∪A_{k−1}∪A_k∩A_{k+1}
-                                                        =  A_1∪A_2∪ · · · ∪A_{k−1}∪A_k∪A_{k+1}.
+                           ‾(A_1∩A_2∩ · · · ∩A_{k−1}∩A_k∩A_{k+1})  =
+                          ‾(A_1∩A_2∩ · · · ∩A_{k−1}∩(A_k∩A_{k+1}))  =  ‾(A_1)∪‾(A_2)∪ · · · ∪‾(A_{k−1})∪‾(A_k∩A_{k+1})
+                                                        =  ‾(A_1)∪‾(A_2)∪ · · · ∪‾(A_{k−1})∪‾(A_k)∪‾(A_{k+1}).
                        Thus the statement is true when it involves k+1 sets.
                   This completes the proof by strong induction.                             ■
               19. Prove _k∑_{=1k2}^{n1} ≤2− _n^1 for every n.
@@ -12528,8 +12528,8 @@
                3. Suppose A ={1, 2, 3}. Let f : A→A be the function f ={(1, 2), (2, 2), (3, 1)}, and let
                   g :A→A be the function g={(1, 3), (2, 1), (3, 2)}. Find g◦ f and f ◦g.
                   g◦f ={(1, 1), (2, 1), (3, 3)};  f ◦g={(1, 1), (2, 2), (3, 2)}√           .
-               5. If f,g :R→R are defined as f(x)= ^3 x+1 and√g(x)=x^3, find formulas for g◦f and
-                  f ◦g.   Answers: g◦f (x)=x+1;  f ◦g(x)= ^3 x^3+1
+               5. If f,g :R→R are defined as f(x)= ^3 (x+1) and√g(x)=x^3, find formulas for g◦f and
+                  f ◦g.   Answers: g◦f (x)=x+1;  f ◦g(x)= ^3 (x^3+1)
                7. Consider the functions f,g : Z×Z → Z×Z defined as f(m,n) = (mn,m^2) and
                   g(m,n)=(m+1,m+n). Find the formulas for g◦f and f ◦g.
                   Note g◦ f(m,n)= g(f(m,n))= g(mn,m^2)=(mn+1,mn+m^2).
@@ -12657,8 +12657,8 @@
           3. Prove that lim1/(x→0x2) does not exist.
              Proof. Suppose for the sake of contradiction that lim1/(x→0x2) =L, for some L∈R. Fix
              an ε>0 for which L+ε>0. Choose a real number δ>0 for which 0< |x−0| <δ
-             implies |_{x2}^1 −L|<ε. Choose an x>0 that is smaller than both δ and q1/(L+ε). Then
-             0< |x−0| <δ, so |_{x2}^1 −L|<ε. But also, x<q1/(L+ε), so x^2< 1/(L+ε) and hence _{x2}^1 >L+ε.
+             implies |_{x2}^1 −L|<ε. Choose an x>0 that is smaller than both δ and √1/((L+)ε). Then
+             0< |x−0| <δ, so |_{x2}^1 −L|<ε. But also, x<√1/(L+ε), so x^2< 1/(L+ε) and hence _{x2}^1 >L+ε.
              Consequently _{x2}^1 −L>ε, and thus |_{x2}^1 −L|>ε. This is a contradiction.        ■
           5. Prove that lim_{x→0}xcotbinom(1,x) does not exist.
              Proof. Note that cot(x)= _{sin(x)}^{cos(x)}. Because sin(kπ)=0 for any k∈Z, it follows that
@@ -12698,7 +12698,7 @@
                 Section 13.5
                                              √
                1. Prove that the function f(x)=  x is continuous at any number c>0. Deduce that
-                  lim_{x→c}pg(x)=qlim_{x→c} g(x), provided lim_{x→c} g(x)exists and is greater than zero.
+                  lim_{x→c}√(g(x))=√(lim_{x→c} g(x)), provided lim_{x→c} g(x)exists and is greater than zero.
                   Proof.√  Suppose√      c >0. Proving √x is continuous at c amounts to proving that
                   lim_{x→c}  x=  c. Here is a proof of this limit: For any ε>0 let δ be smaller than both
                   c and ε√c. Now suppose 0< |x−c| <δ. Because δ< c it follows that |x−c| < c, and
@@ -12712,7 +12712,7 @@
              (Note: above we used the fact  x+  c >  c to get  _{x−c} <  _c.) We have now
              shown that 0< |x−c| <δ implies |√x−√c|<ε, so lim_{x→c}√x=√√c. This means √x is
              continuous at any number x=c, by Definition 13.3.
-             Applying Theorem 13.9, we get lim_{x→c}pg(x)=qlim_{x→c}g(x).                      ■
+             Applying Theorem 13.9, we get lim_{x→c}√(g(x))=√(lim_{x→c}g(x)).                      ■
            Section 13.6
           1. If n∈N, then _xlim1/(→∞xn) =0.
              Proof. Suppose ε > 0. Let N = _{n√ε}^1. If x > N, then x^n > N^n = _ε^1, so 0< _{xn}^1 < ε.
@@ -12954,7 +12954,7 @@
              f(x,y)=(x,y)is clearly injective. For g:R^2 →B, consider the function
                                         (     x           y     )
                                  g(x,y)=            ,             .
-                                         px^2+y^2+1  px^2+y^2+1
+                                         √(x^2+y^2)+1  √(x^2+y^2)+1
              Verify that this is an injective function g:R^2→B.
           7. Prove or disprove: If there is a injection f :A→B and a surjection g: A→B, then
              there is a bijection h :A→B.

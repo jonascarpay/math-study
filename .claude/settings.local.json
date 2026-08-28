@@ -11,7 +11,12 @@
       "Bash(pdfinfo *)",
       "Bash(pdffonts *)",
       "Bash(jj --version)",
-      "Bash(jj split *)"
+      "Bash(jj split *)",
+      "Bash(python3 -)",
+      "Bash(python3 mkscan.py BookOfProof.pdf /tmp/claude-1000/-home-jmc-Dev-math-me-up/54c98a73-9f9e-4cc4-86ce-c8ae760c8b3b/scratchpad/p.txt)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 mkscan.py BookOfProof.pdf /tmp/claude-1000/-home-jmc-Dev-math-me-up/54c98a73-9f9e-4cc4-86ce-c8ae760c8b3b/scratchpad/repro.txt)",
+      "Bash(python3 -c \"import ast,sys; ast.parse\\(open\\('mkscan.py'\\).read\\(\\)\\); print\\('parses OK'\\)\")"
     ]
   }
 }

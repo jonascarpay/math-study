@@ -21,7 +21,7 @@ pdftotext -enc UTF-8 -layout BookOfProof.pdf BookOfProof.raw.txt
 ### Why the raw scan is unusable on its own
 
 None of this book's fonts carry a ToUnicode map, and the math is set in the
-Fourier family. Plain `pdftotext` therefore produces two kinds of damage:
+Fourier family. Plain `pdftotext` therefore produces three kinds of damage:
 
 - **Every math delimiter becomes an unrelated Latin-1 byte.** `{` `}` arrive
   as `©` `ª`, `|` as `¯`, `(` `)` as `¡` `¢`, and the braces routinely land
@@ -30,13 +30,24 @@ Fourier family. Plain `pdftotext` therefore produces two kinds of damage:
 - **Sub- and superscripts collapse onto the baseline and interleave.**
   $F_{n+1}^2$ comes out as `F n2+1`, which reads as a perfectly plausible
   but completely different expression. This one fails *silently*.
+- **Horizontal rules are not text at all, so they disappear.** The book
+  draws two things with them, a set complement's bar and a radical's
+  vinculum, and both vanish without trace: Definition 1.6's `A̅ = U − A`
+  arrives as `A=U −A`, and `√(x²+y²)+1` as `px^2+y^2+1`.
 
-`mkscan.py` fixes both by reading `pdftohtml -xml`, which exposes the font
-family and the size/position of every span. Provenance decides the ambiguous
-glyphs (`;` is ∅ only when it came from the math font, never when it came
-from the text font), and size plus vertical offset recovers the scripts.
-Every glyph mapping in that script was verified against its context in the
-book, not guessed.
+`mkscan.py` fixes all three. `pdftohtml -xml` exposes the font family and
+the size/position of every span. Provenance decides the ambiguous glyphs
+(`;` is ∅ only when it came from the math font, never when it came from the
+text font), and size plus vertical offset recovers the scripts. A second
+pass over `pdftocairo -svg` picks up the rules, which that backend does
+emit, and matches each to the glyphs beneath it. Every glyph mapping in the
+script was verified against its context in the book, not guessed.
+
+Telling a complement bar from a fraction bar is the one genuinely hard
+part, and geometry does not settle it — the line above an overline can sit
+as close as a numerator does. `mkscan.py` decides on what the bar covers
+instead: this book complements sets, which are named with capitals. See
+`BAR_OVER` and the residual failure noted below.
 
 ### Notation used in `BookOfProof.txt`
 
@@ -46,6 +57,11 @@ book, not guessed.
   notes that some texts write `C(n,k)`; `binom` is used here because `C` is
   constantly in use as a set name.)
 - Fractions are inlined with parentheses: `(1+√5)/2`, `(9!)/(4!5!)`.
+- Set complement is a combining overline on a single symbol, `A̅`, and
+  `‾(…)` when the bar covers more: `‾(A∩B) = A̅∪B̅`. Nesting works, so
+  Exercises 1.6.1(i) reads `‾(A̅∩B)`.
+- A radical's extent is parenthesised when it covers more than one span:
+  `√(x^2+y^2)`, but plain `√2`.
 - Recovered symbols: `∅ √ ′ ⌊⌋ ⌈⌉ 𝒫 ℱ ∑ ⋃ ⋂ ∤ ✓ ℓ ≠ ⊈ ≢`.
 - `ℝ ℤ ℕ ℚ` are written as plain `R Z N Q`, as the book pronounces them.
 
@@ -61,15 +77,19 @@ Read the PDF (`Read` with `pages:`) when any of these matter:
 - **Figures, diagrams, Venn diagrams and the dice glyphs are drawn, not
   set as text.** They come through as blank space — e.g. Example 1.3's
   `A={  ,  ,  ,  ,  ,  }` is really six dice faces.
-- **Radical extent is not marked.** `√x^2−x−1` does not record how far the
-  bar reaches.
-- **Complement overlines are drawn as rules and vanish entirely.** This one
-  also fails silently: Definition 1.6's `A=U −A` is really `A̅ = U − A`, and
-  Exercises 1.6 come through as nine indistinguishable copies of `A∩B`.
-  Always read the PDF when complements are in play. A 900-dpi crop
-  (`pdftoppm -r 900 -png -x .. -y .. -W .. -H ..`) is the reliable way to
-  see which symbols a bar covers.
+- **Book page 254 has three fraction bars misread as complements** —
+  `M̅`, `‾(M^2)` and `‾(4L)` are really `1/M`, `.../M²` and `.../4L` in the
+  ε-δ proof of Theorem 13.5. It is the only page in the book where the
+  capitals-only test misfires, and its display fractions are mangled
+  anyway; read the PDF for that page.
+- **A bar is dropped when it spans a gap wider than one character**, so
+  the fraction bars in truth-table-like layouts stay out — but so would a
+  complement drawn over material with a wide gap in it. None occur.
 - Column alignment in wide tables can jitter by a space or two.
+
+When a bar matters and you want certainty, a 900-dpi crop
+(`pdftoppm -r 900 -png -x .. -y .. -W .. -H ..`) shows exactly which
+symbols it covers, including bars over bars.
 
 Truth tables — all of chapter 2 — come through with columns intact, and the
 Solutions chapter is near-perfect prose.
@@ -179,4 +199,5 @@ the book's own blackboard bold `ℝ ℤ ℕ ℚ`, and `𝒫` for the power set.
 
 Set complement is written with a combining overline: `A̅`. When the bar
 covers a compound expression, write it as `‾(A ∩ B)`. Both files state this
-convention in their header.
+convention in their header, and it is the same convention the scan uses, so
+complements can be grepped across the two.
