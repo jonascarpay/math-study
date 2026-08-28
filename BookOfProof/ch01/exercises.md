@@ -9,217 +9,335 @@ compound expression it is written `‾(A ∩ B)`.
 
 1. {5x − 1 : x ∈ ℤ}
 
-<!-- pending -->
+{…, −6, −1, 4, 9, …}
+
+<!-- correct -->
 
 2. {3x + 2 : x ∈ ℤ}
 
-<!-- pending -->
+{…, −4, −1, 2, 5, …}
+
+<!-- correct -->
 
 3. {x ∈ ℤ : −2 ≤ x < 7}
 
-<!-- pending -->
+{−2, −1, 0, 1, 2, 3, 4, 5, 6}
+
+<!-- correct -->
 
 4. {x ∈ ℕ : −2 < x ≤ 7}
 
-<!-- pending -->
+{1, 2, 3, 4, 5, 6, 7}
+
+<!-- correct -->
 
 5. {x ∈ ℝ : x² = 3}
 
-<!-- pending -->
+{√3, −√3}
+
+<!-- correct -->
 
 6. {x ∈ ℝ : x² = 9}
 
-<!-- pending -->
+{3, −3}
+
+<!-- correct -->
 
 7. {x ∈ ℝ : x² + 5x = −6}
 
-<!-- pending -->
+{−2, −3}
+
+<!-- correct -->
 
 8. {x ∈ ℝ : x³ + 5x² = −6x}
 
-<!-- pending -->
+{−2, −3, 0}
+
+<!-- correct -->
 
 9. {x ∈ ℝ : sin πx = 0}
 
-<!-- pending -->
+ℤ = {…, −2, −1, 0, 1, 2, …}
+
+<!-- correct -->
 
 10. {x ∈ ℝ : cos x = 1}
 
-<!-- pending -->
+{…, −2τ, −τ, 0, τ, 2τ, …} = {τx : x ∈ ℤ}
+
+<!-- correct -->
 
 11. {x ∈ ℤ : |x| < 5}
 
-<!-- pending -->
+{−4, −3, −2, −1, 0, 1, 2, 3, 4}
+
+<!-- correct -->
 
 12. {x ∈ ℤ : |2x| < 5}
 
-<!-- pending -->
+{−2, −1, 0, 1, 2}
+
+<!-- correct -->
 
 13. {x ∈ ℤ : |6x| < 5}
 
-<!-- pending -->
+{0}
+
+<!-- correct -->
 
 14. {5x : x ∈ ℤ, |2x| ≤ 8}
 
-<!-- pending -->
+{−20, −15, −10, −5, 0, 5, 10, 15, 20}
+
+<!-- correct -->
 
 15. {5a + 2b : a, b ∈ ℤ}
 
-<!-- pending -->
+ℤ = {…, −2, −1, 0, 1, 2, …}
+
+For any n ∈ ℤ, take a = n and b = −2n. Then
+
+    5a + 2b = 5n + 2(−2n) = n.
+
+<!-- correct -->
 
 16. {6a + 2b : a, b ∈ ℤ}
 
-<!-- pending -->
+{…, −4, −2, 0, 2, 4, …} = {2n : n ∈ ℤ}
+
+Multiplying by 6 and by 2, and addition, preserve evenness, so 6a + 2b is
+always even.
+
+Conversely, for any even number 2n, pick a = 0 and b = n:
+
+    6a + 2b = 6·0 + 2n = 2n,
+
+so every even number is of this form.
+
+<!-- correct -->
 
 **B.** Write each of the following sets in set-builder notation.
 
 17. {2, 4, 8, 16, 32, 64, …}
 
-<!-- pending -->
+{2ⁿ : n ∈ ℕ}
+
+<!-- correct -->
 
 18. {0, 4, 16, 36, 64, 100, …}
 
-<!-- pending -->
+{(2n − 2)² : n ∈ ℕ}
+
+<!-- correct -->
 
 19. {…, −6, −3, 0, 3, 6, 9, 12, 15, …}
 
-<!-- pending -->
+{3n : n ∈ ℤ}
+
+<!-- correct -->
 
 20. {…, −8, −3, 2, 7, 12, 17, …}
 
-<!-- pending -->
+{5n − 3 : n ∈ ℤ}
+
+<!-- correct -->
 
 21. {0, 1, 4, 9, 16, 25, 36, …}
 
-<!-- pending -->
+{n² : n ∈ ℤ}
+
+<!-- correct -->
 
 22. {3, 6, 11, 18, 27, 38, …}
 
-<!-- pending -->
+{n² + 2 : n ∈ ℕ}
+
+<!-- correct -->
 
 23. {3, 4, 5, 6, 7, 8}
 
-<!-- pending -->
+{n ∈ ℕ : 3 ≤ n ≤ 8}
+
+<!-- correct -->
 
 24. {−4, −3, −2, −1, 0, 1, 2}
 
-<!-- pending -->
+{n ∈ ℤ : −4 ≤ n ≤ 2}
+
+<!-- correct -->
 
 25. {…, 1/8, 1/4, 1/2, 1, 2, 4, 8, …}
 
-<!-- pending -->
+{2ⁿ : n ∈ ℤ}
+
+<!-- correct -->
 
 26. {…, 1/27, 1/9, 1/3, 1, 3, 9, 27, …}
 
-<!-- pending -->
+{3ⁿ : n ∈ ℤ}
+
+<!-- correct -->
 
 27. {…, −π, −π/2, 0, π/2, π, 3π/2, 2π, 5π/2, …}
 
-<!-- pending -->
+{πn/2 : n ∈ ℤ}
+
+<!-- correct -->
 
 28. {…, −3/2, −3/4, 0, 3/4, 3/2, 9/4, 3, 15/4, 9/2, …}
 
-<!-- pending -->
+{3n/4 : n ∈ ℤ}
+
+<!-- correct -->
 
 **C.** Find the following cardinalities.
 
 29. |{{1}, {2, {3,4}}, ∅}|
 
-<!-- pending -->
+3
+
+<!-- correct -->
 
 30. |{{1,4}, a, b, {{3,4}}, {∅}}|
 
-<!-- pending -->
+5
+
+<!-- correct -->
 
 31. |{{{1}, {2, {3,4}}, ∅}}|
 
-<!-- pending -->
+1
+
+<!-- correct -->
 
 32. |{{{1,4}, a, b, {{3,4}}, {∅}}}|
 
-<!-- pending -->
+1
+
+<!-- correct -->
 
 33. |{x ∈ ℤ : |x| < 10}|
 
-<!-- pending -->
+19
+
+<!-- correct -->
 
 34. |{x ∈ ℕ : |x| < 10}|
 
-<!-- pending -->
+9
+
+<!-- correct -->
 
 35. |{x ∈ ℤ : x² < 10}|
 
-<!-- pending -->
+7
+
+<!-- correct -->
 
 36. |{x ∈ ℕ : x² < 10}|
 
-<!-- pending -->
+3
+
+<!-- correct -->
 
 37. |{x ∈ ℕ : x² < 0}|
 
-<!-- pending -->
+0
+
+<!-- correct -->
 
 38. |{x ∈ ℕ : 5x ≤ 20}|
 
-<!-- pending -->
+4
+
+<!-- correct -->
 
 **D.** Sketch the following sets of points in the x-y plane.
 
 39. {(x,y) : x ∈ [1,2], y ∈ [1,2]}
 
-<!-- pending -->
+The filled quadrilateral with corners (1,1), (1,2), (2,1), (2,2).
+
+<!-- correct -->
 
 40. {(x,y) : x ∈ [0,1], y ∈ [1,2]}
 
-<!-- pending -->
+The filled quadrilateral with edges and corners (0,1), (0,2), (1,1), (1,2).
+
+<!-- correct -->
 
 41. {(x,y) : x ∈ [−1,1], y = 1}
 
-<!-- pending -->
+The line segment from (−1,1) to (1,1).
+
+<!-- correct -->
 
 42. {(x,y) : x = 2, y ∈ [0,1]}
 
-<!-- pending -->
+The line segment from (2,0) to (2,1).
+
+<!-- correct -->
 
 43. {(x,y) : |x| = 2, y ∈ [0,1]}
 
-<!-- pending -->
+Two line segments, from (2,0) to (2,1) and from (−2,0) to (−2,1).
+
+<!-- correct -->
 
 44. {(x, x²) : x ∈ ℝ}
 
-<!-- pending -->
+The parabola y = x².
+
+<!-- correct -->
 
 45. {(x,y) : x, y ∈ ℝ, x² + y² = 1}
 
-<!-- pending -->
+The circle centered at the origin with radius 1.
+
+<!-- correct -->
 
 46. {(x,y) : x, y ∈ ℝ, x² + y² ≤ 1}
 
-<!-- pending -->
+The filled disk, including its edge, centered at the origin with radius 1.
+
+<!-- correct -->
 
 47. {(x,y) : x, y ∈ ℝ, y ≥ x² − 1}
 
-<!-- pending -->
+The parabola y = x² − 1 together with every point above it.
+
+<!-- correct -->
 
 48. {(x,y) : x, y ∈ ℝ, x > 1}
 
-<!-- pending -->
+The region of the plane to the right of the line x = 1.
+
+<!-- correct -->
 
 49. {(x, x + y) : x ∈ ℝ, y ∈ ℤ}
 
-<!-- pending -->
+The lines of slope 1 crossing the y-axis at the integers.
+
+<!-- correct -->
 
 50. {(x, x²/y) : x ∈ ℝ, y ∈ ℕ}
 
-<!-- pending -->
+An infinite set of parabolas: y = x² at the top, then y = x²/n scaled down by
+a factor n, for n = 1, 2, 3, ….
+
+<!-- correct -->
 
 51. {(x,y) ∈ ℝ² : (y − x)(y + x) = 0}
 
-<!-- pending -->
+The two lines y = ±x.
+
+<!-- correct -->
 
 52. {(x,y) ∈ ℝ² : (y − x²)(y + x²) = 0}
 
-<!-- pending -->
+Same as 51: the two parabolas y = ±x².
+
+<!-- correct -->
 
 # Exercises for Section 1.2, page 11
 
