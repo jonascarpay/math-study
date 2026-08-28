@@ -354,7 +354,32 @@ Same as 51: the two parabolas y = ±x².
    (g) A × (B × B)
    (h) B³
 
-<!-- pending -->
+(a) {(1,a), (1,c), (2,a), (2,c), (3,a), (3,c), (4,a), (4,c)}
+
+(b) Same as (a) but flipped:
+    {(a,1), (a,2), (a,3), (a,4), (c,1), (c,2), (c,3), (c,4)}
+
+(c) {(1,1), (1,2), (1,3), (1,4), (2,1), (2,2), (2,3), (2,4),
+     (3,1), (3,2), (3,3), (3,4), (4,1), (4,2), (4,3), (4,4)}
+
+(d) {(a,a), (a,c), (c,a), (c,c)}
+
+(e) ∅
+
+(f) {((1,a),a), ((1,a),c), ((1,c),a), ((1,c),c),
+     ((2,a),a), ((2,a),c), ((2,c),a), ((2,c),c),
+     ((3,a),a), ((3,a),c), ((3,c),a), ((3,c),c),
+     ((4,a),a), ((4,a),c), ((4,c),a), ((4,c),c)}
+
+(g) {(1,(a,a)), (1,(a,c)), (1,(c,a)), (1,(c,c)),
+     (2,(a,a)), (2,(a,c)), (2,(c,a)), (2,(c,c)),
+     (3,(a,a)), (3,(a,c)), (3,(c,a)), (3,(c,c)),
+     (4,(a,a)), (4,(a,c)), (4,(c,a)), (4,(c,c))}
+
+(h) {(a,a,a), (a,a,c), (a,c,a), (a,c,c),
+     (c,a,a), (c,a,c), (c,c,a), (c,c,c)}
+
+<!-- correct -->
 
 2. Suppose A = {π, e, 0} and B = {0, 1}.
 
@@ -367,81 +392,139 @@ Same as 51: the two parabolas y = ±x².
    (g) A × (B × B)
    (h) A × B × B
 
-<!-- pending -->
+<!-- skipped -->
 
 3. {x ∈ ℝ : x² = 2} × {a, c, e}
 
-<!-- pending -->
+{(√2, a), (−√2, a), (√2, c), (−√2, c), (√2, e), (−√2, e)}
+
+<!-- correct -->
 
 4. {n ∈ ℤ : 2 < n < 5} × {n ∈ ℤ : |n| = 5}
 
-<!-- pending -->
+{(3, 5), (3, −5), (4, 5), (4, −5)}
+
+<!-- correct -->
 
 5. {x ∈ ℝ : x² = 2} × {x ∈ ℝ : |x| = 2}
 
-<!-- pending -->
+{(√2, 2), (−√2, 2), (√2, −2), (−√2, −2)}
+
+<!-- correct -->
 
 6. {x ∈ ℝ : x² = x} × {x ∈ ℕ : x² = x}
 
-<!-- pending -->
+{(0, 1), (1, 1)}
+
+<!-- correct -->
 
 7. {∅} × {0, ∅} × {0, 1}
 
-<!-- pending -->
+{(∅, 0, 0), (∅, ∅, 0), (∅, 0, 1), (∅, ∅, 1)}
+
+<!-- correct -->
 
 8. {0, 1}⁴
 
-<!-- pending -->
+All 4-tuples of 0s and 1s, in binary counting order:
+
+{(0,0,0,0), (0,0,0,1), (0,0,1,0), (0,0,1,1),
+ (0,1,0,0), (0,1,0,1), (0,1,1,0), (0,1,1,1),
+ (1,0,0,0), (1,0,0,1), (1,0,1,0), (1,0,1,1),
+ (1,1,0,0), (1,1,0,1), (1,1,1,0), (1,1,1,1)}
+
+<!-- correct -->
 
 **B.** Sketch these Cartesian products on the x-y plane ℝ² (or ℝ³ for the last two).
 
 9. {1, 2, 3} × {−1, 0, 1}
 
-<!-- pending -->
+A 3 × 3 grid of 9 points, with (1, 1) at the top left and (3, −1) at the
+bottom right:
+
+    y
+     1 |  •   •   •
+     0 |  •   •   •
+    -1 |  •   •   •
+       +-----------  x
+          1   2   3
+
+<!-- correct -->
 
 10. {−1, 0, 1} × {1, 2, 3}
 
-<!-- pending -->
+The same 3 × 3 grid of 9 points, now with (−1, 3) at the top left and
+(1, 1) at the bottom right:
+
+    y
+     3 |  •   •   •
+     2 |  •   •   •
+     1 |  •   •   •
+       +-----------  x
+         -1   0   1
+
+<!-- correct -->
 
 11. [0, 1] × [0, 1]
 
-<!-- pending -->
+The filled unit square, with its bottom left corner at the origin.
+
+<!-- correct -->
 
 12. [−1, 1] × [1, 2]
 
-<!-- pending -->
+The filled rectangle with corners (−1, 1) and (1, 2).
+
+<!-- correct -->
 
 13. {1, 1.5, 2} × [1, 2]
 
-<!-- pending -->
+Three vertical segments from y = 1 to y = 2, at x = 1, x = 1.5 and x = 2.
+
+<!-- correct -->
 
 14. [1, 2] × {1, 1.5, 2}
 
-<!-- pending -->
+Three horizontal segments from x = 1 to x = 2, at y = 1, y = 1.5 and y = 2.
+
+<!-- correct -->
 
 15. {1} × [0, 1]
 
-<!-- pending -->
+The segment from (1, 0) to (1, 1).
+
+<!-- correct -->
 
 16. [0, 1] × {1}
 
-<!-- pending -->
+The segment from (0, 1) to (1, 1).
+
+<!-- correct -->
 
 17. ℕ × ℤ
 
-<!-- pending -->
+The unit lattice of points, restricted to those strictly right of the
+y-axis.
+
+<!-- correct -->
 
 18. ℤ × ℤ
 
-<!-- pending -->
+The whole unit lattice.
+
+<!-- correct -->
 
 19. [0, 1] × [0, 1] × [0, 1]
 
-<!-- pending -->
+The filled unit cube, with opposite corners (0, 0, 0) and (1, 1, 1).
+
+<!-- correct -->
 
 20. {(x,y) ∈ ℝ² : x² + y² ≤ 1} × [0, 1]
 
-<!-- pending -->
+A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
+
+<!-- correct -->
 
 # Exercises for Section 1.3, page 15
 
