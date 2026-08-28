@@ -532,41 +532,61 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 1. {1, 2, 3, 4}
 
-<!-- pending -->
+∅,
+{1}, {2}, {3}, {4},
+{1,2}, {1,3}, {1,4}, {2,3}, {2,4}, {3,4},
+{2,3,4}, {1,3,4}, {1,2,4}, {1,2,3},
+{1,2,3,4}
+
+<!-- correct -->
 
 2. {1, 2, ∅}
 
-<!-- pending -->
+∅, {1}, {2}, {∅}, {1,2}, {1,∅}, {2,∅}, {1,2,∅}
+
+<!-- correct -->
 
 3. {{ℝ}}
 
-<!-- pending -->
+∅, {{ℝ}}
+
+<!-- correct -->
 
 4. ∅
 
-<!-- pending -->
+∅
+
+<!-- correct -->
 
 5. {∅}
 
-<!-- pending -->
+∅, {∅}
+
+<!-- correct -->
 
 6. {ℝ, ℚ, ℕ}
 
-<!-- pending -->
+∅, {ℝ}, {ℚ}, {ℕ}, {ℝ,ℚ}, {ℝ,ℕ}, {ℚ,ℕ}, {ℝ,ℚ,ℕ}
+
+<!-- correct -->
 
 7. {ℝ, {ℚ, ℕ}}
 
-<!-- pending -->
+∅, {ℝ}, {{ℚ,ℕ}}, {ℝ, {ℚ,ℕ}}
+
+<!-- correct -->
 
 8. {{0,1}, {0,1,{2}}, {0}}
 
-<!-- pending -->
+<!-- skipped -->
 
 **B.** Write out the following sets by listing their elements between braces.
 
 9. {X : X ⊆ {3, 2, a} and |X| = 2}
 
-<!-- pending -->
+{{3,2}, {3,a}, {2,a}}
+
+<!-- correct -->
 
 10. {X ⊆ ℕ : |X| ≤ 1}
 
@@ -574,7 +594,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 11. {X : X ⊆ {3, 2, a} and |X| = 4}
 
-<!-- pending -->
+∅
+
+<!-- correct -->
 
 12. {X : X ⊆ {3, 2, a} and |X| = 1}
 
@@ -584,7 +606,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 13. ℝ³ ⊆ ℝ³
 
-<!-- pending -->
+True. Every set is a subset of itself.
+
+<!-- correct -->
 
 14. ℝ² ⊆ ℝ³
 
@@ -592,7 +616,10 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 15. {(x,y) ∈ ℝ² : x − 1 = 0} ⊆ {(x,y) ∈ ℝ² : x² − x = 0}
 
-<!-- pending -->
+True. The left set has x = 1; the right set has x ∈ {0, 1}. So the left is
+a subset of the right.
+
+<!-- correct -->
 
 16. {(x,y) ∈ ℝ² : x² − x = 0} ⊆ {(x,y) ∈ ℝ² : x − 1 = 0}
 
@@ -604,7 +631,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 1. 𝒫({{a,b}, {c}})
 
-<!-- pending -->
+{∅, {{a,b}}, {{c}}, {{a,b},{c}}}
+
+<!-- correct -->
 
 2. 𝒫({1, 2, 3, 4})
 
@@ -612,7 +641,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 3. 𝒫({{∅}, 5})
 
-<!-- pending -->
+{∅, {{∅}}, {5}, {{∅}, 5}}
+
+<!-- correct -->
 
 4. 𝒫({ℝ, ℚ})
 
@@ -620,7 +651,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 5. 𝒫(𝒫({2}))
 
-<!-- pending -->
+{∅, {∅}, {{2}}, {∅, {2}}}
+
+<!-- correct -->
 
 6. 𝒫({1,2}) × 𝒫({3})
 
@@ -628,7 +661,11 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 7. 𝒫({a,b}) × 𝒫({0,1})
 
-<!-- pending -->
+All 16 pairs of
+
+    {∅, {a}, {b}, {a,b}}  ×  {∅, {0}, {1}, {0,1}}
+
+<!-- correct -->
 
 8. 𝒫({1,2} × {3})
 
@@ -636,7 +673,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 9. 𝒫({a,b} × {0})
 
-<!-- pending -->
+{∅, {(a,0)}, {(b,0)}, {(a,0), (b,0)}}
+
+<!-- correct -->
 
 10. {X ∈ 𝒫({1,2,3}) : |X| ≤ 1}
 
@@ -644,7 +683,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 11. {X ⊆ 𝒫({1,2,3}) : |X| ≤ 1}
 
-<!-- pending -->
+{∅, {∅}, {{1}}, {{2}}, {{3}}, {{1,2}}, {{1,3}}, {{2,3}}, {{1,2,3}}}
+
+<!-- correct -->
 
 12. {X ∈ 𝒫({1,2,3}) : 2 ∈ X}
 
@@ -654,7 +695,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 13. |𝒫(𝒫(𝒫(A)))|
 
-<!-- pending -->
+2^(2^(2^m))
+
+<!-- correct -->
 
 14. |𝒫(𝒫(A))|
 
@@ -662,7 +705,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 15. |𝒫(A × B)|
 
-<!-- pending -->
+2^(mn)
+
+<!-- correct -->
 
 16. |𝒫(A) × 𝒫(B)|
 
@@ -670,7 +715,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 17. |{X ∈ 𝒫(A) : |X| ≤ 1}|
 
-<!-- pending -->
+m + 1
+
+<!-- correct -->
 
 18. |𝒫(A × 𝒫(B))|
 
@@ -678,7 +725,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 19. |𝒫(𝒫(𝒫(A × ∅)))|
 
-<!-- pending -->
+4
+
+<!-- correct -->
 
 20. |{X ⊆ 𝒫(A) : |X| ≤ 1}|
 
@@ -698,7 +747,17 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
    (h) B ∪ C
    (i) C − B
 
-<!-- pending -->
+(a) {1, 3, 4, 5, 6, 7, 8, 9}
+(b) {4, 6}
+(c) {1, 3, 7, 9}
+(d) {1, 3, 6, 7, 9}
+(e) {5, 8}
+(f) {4}
+(g) {4, 5, 8}
+(h) {4, 5, 6, 8}
+(i) ∅
+
+<!-- correct -->
 
 2. Suppose A = {0, 2, 4, 6, 8}, B = {1, 3, 5, 7} and C = {2, 8, 4}. Find:
 
@@ -726,7 +785,17 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
    (h) 𝒫(A ∩ B)
    (i) 𝒫(A × B)
 
-<!-- pending -->
+(a) {(1,1), (1,2)}
+(b) {(0,1), (0,2), (1,1), (1,2), (2,1), (2,2)}
+(c) {(0,1), (0,2)}
+(d) {(1,0), (1,1)}
+(e) ∅
+(f) {∅, {1}}
+(g) {{0}, {0,1}}
+(h) {∅, {1}}
+(i) the power set of {(0,1), (0,2), (1,1), (1,2)}, 16 elements
+
+<!-- correct -->
 
 4. Suppose A = {b, c, d} and B = {a, b}. Find:
 
@@ -748,7 +817,7 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
    review how you drew sets like [1,3] × [1,3] in the exercises for
    Section 1.2.)
 
-<!-- pending -->
+<!-- skipped -->
 
 6. Sketch the sets X = [−1,3] × [0,2] and Y = [0,3] × [1,4] on the plane ℝ².
    On separate drawings, shade in the sets X ∪ Y, X ∩ Y, X − Y and Y − X.
@@ -759,7 +828,7 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
    Y = {(x,y) ∈ ℝ² : x ≥ 0} on ℝ². On separate drawings, shade in the sets
    X ∪ Y, X ∩ Y, X − Y and Y − X.
 
-<!-- pending -->
+<!-- skipped -->
 
 8. Sketch the sets X = {(x,y) ∈ ℝ² : x² + y² ≤ 1} and
    Y = {(x,y) ∈ ℝ² : −1 ≤ y ≤ 0} on ℝ². On separate drawings, shade in the
@@ -770,7 +839,12 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 9. Is the statement (ℝ × ℤ) ∩ (ℤ × ℝ) = ℤ × ℤ true or false? What about the
    statement (ℝ × ℤ) ∪ (ℤ × ℝ) = ℝ × ℝ?
 
-<!-- pending -->
+True. ℝ × ℤ is the horizontal lines at integer height, ℤ × ℝ is the
+vertical lines at integer x, so their intersection is the lattice ℤ × ℤ.
+
+False. (1.5, 1.5) is in neither of the two sets.
+
+<!-- correct -->
 
 10. Do you think the statement (ℝ − ℤ) × ℕ = (ℝ × ℕ) − (ℤ × ℕ) is true, or
     false? Justify.
@@ -792,7 +866,7 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
    (h) A̅ ∩ B
    (i) ‾(A̅ ∩ B)
 
-<!-- pending -->
+<!-- skipped -->
 
 2. Let A = {0, 2, 4, 6, 8} and B = {1, 3, 5, 7} have universal set
    U = {0, 1, 2, …, 8}. Find:
@@ -812,7 +886,7 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 3. Sketch the set X = [1,3] × [1,2] on the plane ℝ². On separate drawings,
    shade in the sets X̅ and X̅ ∩ ([0,2] × [0,3]).
 
-<!-- pending -->
+<!-- skipped -->
 
 4. Sketch the set X = [−1,3] × [0,2] on the plane ℝ². On separate drawings,
    shade in the sets X̅ and X̅ ∩ ([−2,4] × [−1,3]).
@@ -822,7 +896,7 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 5. Sketch the set X = {(x,y) ∈ ℝ² : 1 ≤ x² + y² ≤ 4} on the plane ℝ². On a
    separate drawing, shade in the set X̅.
 
-<!-- pending -->
+<!-- skipped -->
 
 6. Sketch the set X = {(x,y) ∈ ℝ² : y < x²} on ℝ². Shade in the set X̅.
 
@@ -832,7 +906,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 1. Draw a Venn diagram for A̅, where A is a subset of a universal set U.
 
-<!-- pending -->
+Shade everything in U outside A.
+
+<!-- correct -->
 
 2. Draw a Venn diagram for B − A.
 
@@ -840,7 +916,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 3. Draw a Venn diagram for (A − B) ∩ C.
 
-<!-- pending -->
+Shade everything in both A and C but not in B.
+
+<!-- correct -->
 
 4. Draw a Venn diagram for (A ∪ B) − C.
 
@@ -849,7 +927,10 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 5. Draw Venn diagrams for A ∪ (B ∩ C) and (A ∪ B) ∩ (A ∪ C). Based on your
    drawings, do you think A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)?
 
-<!-- pending -->
+Yes. Both shade all of A together with the region B ∩ C: union distributes
+over intersection.
+
+<!-- correct -->
 
 6. Draw Venn diagrams for A ∩ (B ∪ C) and (A ∩ B) ∪ (A ∩ C). Based on your
    drawings, do you think A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)?
@@ -860,7 +941,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
    ‾(A ∩ B) and A̅ ∪ B̅. Based on your drawings, do you think it's true that
    ‾(A ∩ B) = A̅ ∪ B̅?
 
-<!-- pending -->
+Yes. Both shade everything except the lens A ∩ B — De Morgan's law.
+
+<!-- correct -->
 
 8. Suppose sets A and B are in a universal set U. Draw Venn diagrams for
    ‾(A ∪ B) and A̅ ∩ B̅. Based on your drawings, do you think it's true that
@@ -870,7 +953,9 @@ A solid cylinder around the z-axis, of unit radius, from z = 0 to z = 1.
 
 9. Draw a Venn diagram for (A ∩ B) − C.
 
-<!-- pending -->
+Shade everything in both A and B but not in C.
+
+<!-- correct -->
 
 10. Draw a Venn diagram for (A − B) ∪ C.
 
@@ -883,7 +968,7 @@ region is described here in words.
 
 11. Shaded: the part of B ∩ C lying outside A.
 
-<!-- pending -->
+<!-- skipped -->
 
 12. Shaded: the part of A lying outside B, together with all of B ∩ C.
 
@@ -891,7 +976,7 @@ region is described here in words.
 
 13. Shaded: all of A ∪ B ∪ C except the central region A ∩ B ∩ C.
 
-<!-- pending -->
+<!-- skipped -->
 
 14. Shaded: the part of A lying outside B.
 
