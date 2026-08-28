@@ -7,11 +7,11 @@
       "Bash(jj diff *)",
       "Bash(jj describe *)",
       "Bash(jj new *)",
-      "Bash(awk 'BEGIN{p=1} /\\\\f/{p++} p==30' LADR4e.txt)",
-      "Bash(awk 'BEGIN{p=1} /\\\\f/{p++} p>=33 && p<=33' LADR4e.txt)",
+      "Bash(awk *)",
+      "Bash(pdfinfo *)",
+      "Bash(pdffonts *)",
       "Bash(jj --version)",
-      "Bash(jj split *)",
-      "Bash(awk 'BEGIN{p=1} /\\\\f/{p++} p==41' LADR4e.txt)"
+      "Bash(jj split *)"
     ]
   }
 }
