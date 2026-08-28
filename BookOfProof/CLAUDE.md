@@ -63,6 +63,12 @@ Read the PDF (`Read` with `pages:`) when any of these matter:
   `A={  ,  ,  ,  ,  ,  }` is really six dice faces.
 - **Radical extent is not marked.** `√x^2−x−1` does not record how far the
   bar reaches.
+- **Complement overlines are drawn as rules and vanish entirely.** This one
+  also fails silently: Definition 1.6's `A=U −A` is really `A̅ = U − A`, and
+  Exercises 1.6 come through as nine indistinguishable copies of `A∩B`.
+  Always read the PDF when complements are in play. A 900-dpi crop
+  (`pdftoppm -r 900 -png -x .. -y .. -W .. -H ..`) is the reliable way to
+  see which symbols a bar covers.
 - Column alignment in wide tables can jitter by a space or two.
 
 Truth tables — all of chapter 2 — come through with columns intact, and the
@@ -165,3 +171,12 @@ and that section extracts cleanly. Two consequences:
   find yourself reading the raw scan, remember that some `;` really are
   semicolons — 102 of the 349 are.
 - Sections marked `∗` are flagged by the author as skippable.
+
+## Conventions in our own `chNN/` files
+
+The scan writes `R Z N Q`, but our `definitions.md` and `exercises.md` use
+the book's own blackboard bold `ℝ ℤ ℕ ℚ`, and `𝒫` for the power set.
+
+Set complement is written with a combining overline: `A̅`. When the bar
+covers a compound expression, write it as `‾(A ∩ B)`. Both files state this
+convention in their header.
