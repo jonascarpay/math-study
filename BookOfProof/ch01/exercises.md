@@ -990,7 +990,10 @@ region is described here in words.
    (a) ⋃_{i=1}^{4} Aᵢ =
    (b) ⋂_{i=1}^{4} Aᵢ =
 
-<!-- pending -->
+(a) {a, b, c, d, e, f, g, h}
+(b) {a, b}
+
+<!-- correct -->
 
 2. Suppose
 
@@ -1008,7 +1011,10 @@ region is described here in words.
    (a) ⋃_{i ∈ ℕ} Aᵢ =
    (b) ⋂_{i ∈ ℕ} Aᵢ =
 
-<!-- pending -->
+(a) {0, 1, 2, 3, …}
+(b) {0, 1}
+
+<!-- correct -->
 
 4. For each n ∈ ℕ, let Aₙ = {−2n, 0, 2n}.
 
@@ -1020,7 +1026,10 @@ region is described here in words.
 5. (a) ⋃_{i ∈ ℕ} [i, i+1] =
    (b) ⋂_{i ∈ ℕ} [i, i+1] =
 
-<!-- pending -->
+(a) [1, ∞)
+(b) ∅
+
+<!-- correct -->
 
 6. (a) ⋃_{i ∈ ℕ} [0, i+1] =
    (b) ⋂_{i ∈ ℕ} [0, i+1] =
@@ -1030,7 +1039,10 @@ region is described here in words.
 7. (a) ⋃_{i ∈ ℕ} ℝ × [i, i+1] =
    (b) ⋂_{i ∈ ℕ} ℝ × [i, i+1] =
 
-<!-- pending -->
+(a) ℝ × [1, ∞), the half plane above and including y = 1
+(b) ∅
+
+<!-- correct -->
 
 8. (a) ⋃_{α ∈ ℝ} {α} × [0, 1] =
    (b) ⋂_{α ∈ ℝ} {α} × [0, 1] =
