@@ -1052,7 +1052,7 @@ region is described here in words.
 9. (a) ⋃_{X ∈ 𝒫(ℕ)} X =
    (b) ⋂_{X ∈ 𝒫(ℕ)} X =
 
-<!-- pending -->
+<!-- skipped -->
 
 10. (a) ⋃_{x ∈ [0,1]} [x, 1] × [0, x²] =
     (b) ⋂_{x ∈ [0,1]} [x, 1] × [0, x²] =
@@ -1062,7 +1062,10 @@ region is described here in words.
 11. Is ⋂_{α ∈ I} A_α ⊆ ⋃_{α ∈ I} A_α always true for any collection of sets
     A_α with index set I?
 
-<!-- pending -->
+Yes. If x is in every A_α (the left side), then x is in at least one A_α
+(the right side), since I ≠ ∅ by Definition 1.8.
+
+<!-- correct -->
 
 12. If ⋂_{α ∈ I} A_α = ⋃_{α ∈ I} A_α, what do you think can be said about
     the relationships between the sets A_α?
@@ -1072,7 +1075,17 @@ region is described here in words.
 13. If J ≠ ∅ and J ⊆ I, does it follow that ⋃_{α ∈ J} A_α ⊆ ⋃_{α ∈ I} A_α?
     What about ⋂_{α ∈ J} A_α ⊆ ⋂_{α ∈ I} A_α?
 
-<!-- pending -->
+The first holds. If x ∈ ⋃_{α ∈ J} A_α, then x ∈ A_α for some α ∈ J. Since
+J ⊆ I, that α ∈ I, which is the definition of x ∈ ⋃_{α ∈ I} A_α.
+
+The second does not. Take J = {1}, I = {1, 2}, A_1 = {1}, A_2 = ∅. Then
+
+  ⋂_{α ∈ J} A_α = {1},
+  ⋂_{α ∈ I} A_α = {1} ∩ ∅ = ∅,
+
+and {1} ⊈ ∅.
+
+<!-- correct -->
 
 14. If J ≠ ∅ and J ⊆ I, does it follow that ⋂_{α ∈ I} A_α ⊆ ⋂_{α ∈ J} A_α?
     Explain.
