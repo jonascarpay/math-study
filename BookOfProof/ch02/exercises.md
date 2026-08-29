@@ -9,7 +9,9 @@ statement, say if it is true or false, if possible.
 
 1. Every real number is an even integer.
 
-<!-- pending -->
+Statement, false.
+
+<!-- correct -->
 
 2. Every even integer is a real number.
 
@@ -17,7 +19,9 @@ statement, say if it is true or false, if possible.
 
 3. If x and y are real numbers and 5x = 5y, then x = y.
 
-<!-- pending -->
+Statement, true.
+
+<!-- correct -->
 
 4. Sets ℤ and ℕ.
 
@@ -25,7 +29,9 @@ statement, say if it is true or false, if possible.
 
 5. Sets ℤ and ℕ are infinite.
 
-<!-- pending -->
+Statement, true.
+
+<!-- correct -->
 
 6. Some sets are finite.
 
@@ -33,7 +39,9 @@ statement, say if it is true or false, if possible.
 
 7. The derivative of any polynomial of degree 5 is a polynomial of degree 6.
 
-<!-- pending -->
+Statement, false.
+
+<!-- correct -->
 
 8. ℕ ∉ 𝒫(ℕ).
 
@@ -41,7 +49,10 @@ statement, say if it is true or false, if possible.
 
 9. cos(x) = −1.
 
-<!-- pending -->
+Not a statement: it is an open sentence, since whether it is true or false
+depends on the value of x.
+
+<!-- correct -->
 
 10. (ℝ × ℕ) ∩ (ℕ × ℝ) = ℕ × ℕ.
 
@@ -49,7 +60,9 @@ statement, say if it is true or false, if possible.
 
 11. The integer x is a multiple of 7.
 
-<!-- pending -->
+Not a statement.
+
+<!-- correct -->
 
 12. If the integer x is a multiple of 7, then it is divisible by 7.
 
@@ -57,7 +70,9 @@ statement, say if it is true or false, if possible.
 
 13. Either x is a multiple of 7, or it is not.
 
-<!-- pending -->
+Statement, true.
+
+<!-- correct -->
 
 14. Call me Ishmael.
 
@@ -65,7 +80,9 @@ statement, say if it is true or false, if possible.
 
 15. In the beginning, God created the heaven and the earth.
 
-<!-- pending -->
+Statement, but not one we can say is true or false.
+
+<!-- correct -->
 
 # Exercises for Section 2.2, page 42
 
@@ -75,7 +92,11 @@ and Q stand for.
 
 1. The number 8 is both even and a power of 2.
 
-<!-- pending -->
+P ∧ Q, where
+  P : 8 is even
+  Q : 8 is a power of 2
+
+<!-- correct -->
 
 2. The matrix A is not invertible.
 
@@ -83,7 +104,10 @@ and Q stand for.
 
 3. x ≠ y
 
-<!-- pending -->
+∼P, where
+  P : x = y
+
+<!-- correct -->
 
 4. x < y
 
@@ -91,7 +115,10 @@ and Q stand for.
 
 5. y ≥ x
 
-<!-- pending -->
+∼P, where
+  P : y < x
+
+<!-- correct -->
 
 6. There is a quiz scheduled for Wednesday or Friday.
 
@@ -99,7 +126,11 @@ and Q stand for.
 
 7. The number x equals zero, but the number y does not.
 
-<!-- pending -->
+P ∧ ∼Q, where
+  P : x = 0
+  Q : y = 0
+
+<!-- correct -->
 
 8. At least one of the numbers x and y equals 0.
 
@@ -107,7 +138,11 @@ and Q stand for.
 
 9. x ∈ A − B
 
-<!-- pending -->
+P ∧ ∼Q, where
+  P : x ∈ A
+  Q : x ∈ B
+
+<!-- correct -->
 
 10. x ∈ A ∪ B
 
@@ -115,7 +150,11 @@ and Q stand for.
 
 11. A ∈ {X ∈ 𝒫(ℕ) : |X̅| < ∞}
 
-<!-- pending -->
+P ∧ Q, where
+  P : A ⊆ ℕ
+  Q : A̅ is finite
+
+<!-- correct -->
 
 12. Happy families are all alike, but each unhappy family is unhappy in its
     own way. (Leo Tolstoy, Anna Karenina)
@@ -125,7 +164,12 @@ and Q stand for.
 13. Human beings want to be good, but not too good, and not all the time.
     (George Orwell)
 
-<!-- pending -->
+P ∧ ∼Q ∧ ∼R, where
+  P : Human beings want to be good
+  Q : Human beings want to be too good
+  R : Human beings want to be good all the time
+
+<!-- correct -->
 
 14. A man should look for what is, and not for what he thinks should be.
     (Albert Einstein)
