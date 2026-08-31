@@ -183,7 +183,9 @@ into a sentence having the form "If P, then Q."
 
 1. A matrix is invertible provided that its determinant is not zero.
 
-<!-- pending -->
+If a matrix has a nonzero determinant, then it is invertible.
+
+<!-- correct -->
 
 2. For a function to be continuous, it is sufficient that it is
    differentiable.
@@ -192,7 +194,7 @@ into a sentence having the form "If P, then Q."
 
 3. For a function to be continuous, it is necessary that it is integrable.
 
-<!-- pending -->
+<!-- skipped -->
 
 4. A function is rational if it is a polynomial.
 
@@ -200,7 +202,7 @@ into a sentence having the form "If P, then Q."
 
 5. An integer is divisible by 8 only if it is divisible by 4.
 
-<!-- pending -->
+<!-- skipped -->
 
 6. Whenever a surface has only one side, it is non-orientable.
 
@@ -208,7 +210,9 @@ into a sentence having the form "If P, then Q."
 
 7. A series converges whenever it converges absolutely.
 
-<!-- pending -->
+If a series converges absolutely, then it converges.
+
+<!-- correct -->
 
 8. A geometric series with ratio r converges if |r| < 1.
 
@@ -216,7 +220,9 @@ into a sentence having the form "If P, then Q."
 
 9. A function is integrable provided the function is continuous.
 
-<!-- pending -->
+If a function is continuous, then it is integrable.
+
+<!-- correct -->
 
 10. The discriminant is negative only if the quadratic equation has no real
     solutions.
@@ -225,7 +231,7 @@ into a sentence having the form "If P, then Q."
 
 11. You fail only if you stop writing. (Ray Bradbury)
 
-<!-- pending -->
+<!-- skipped -->
 
 12. People will generally accept facts as truth only if the facts agree with
     what they already believe. (Andy Rooney)
@@ -234,7 +240,7 @@ into a sentence having the form "If P, then Q."
 
 13. Whenever people agree with me I feel I must be wrong. (Oscar Wilde)
 
-<!-- pending -->
+<!-- skipped -->
 
 # Exercises for Section 2.4, page 47
 
@@ -244,7 +250,9 @@ into a sentence having the form "P if and only if Q."
 1. For matrix A to be invertible, it is necessary and sufficient that
    det(A) ≠ 0.
 
-<!-- pending -->
+A matrix A is invertible if and only if det(A) ≠ 0.
+
+<!-- correct -->
 
 2. If a function has a constant derivative then it is linear, and
    conversely.
@@ -253,7 +261,9 @@ into a sentence having the form "P if and only if Q."
 
 3. If xy = 0 then x = 0 or y = 0, and conversely.
 
-<!-- pending -->
+xy = 0 if and only if x = 0 or y = 0.
+
+<!-- correct -->
 
 4. If a ∈ ℚ then 5a ∈ ℚ, and if 5a ∈ ℚ then a ∈ ℚ.
 
@@ -262,7 +272,9 @@ into a sentence having the form "P if and only if Q."
 5. For an occurrence to become an adventure, it is necessary and sufficient
    for one to recount it. (Jean-Paul Sartre)
 
-<!-- pending -->
+An occurrence becomes an adventure if and only if one recounts it.
+
+<!-- correct -->
 
 # Exercises for Section 2.5, page 50
 
