@@ -941,7 +941,7 @@ so V₁ + U = V₂ + U, but V₁ ≠ V₂.
     > Hint: When trying to discover whether a conjecture in linear algebra is
     > true or false, it is often useful to start by experimenting in 𝐅².
 
-<!-- pending -->
+<!-- skipped -->
 
 24. A function f : 𝐑 → 𝐑 is called _even_ if
 
@@ -955,4 +955,34 @@ so V₁ + U = V₂ + U, but V₁ ≠ V₂.
     and let V_o denote the set of real-valued odd functions on 𝐑. Show that
     𝐑^𝐑 = V_e ⊕ V_o.
 
-<!-- pending -->
+Decomposition. For f ∈ 𝐑^𝐑 and x ∈ 𝐑,
+
+    f(x) = (f(x) + f(−x) + f(x) − f(−x))/2
+         = (f(x) + f(−x))/2 + (f(x) − f(−x))/2
+         =: e(x) + o(x).
+
+e ∈ V_e, since e(−x) = (f(−x) + f(x))/2 = e(x).
+o ∈ V_o, since o(−x) = (f(−x) − f(x))/2 = −o(x).
+
+V_e is a subspace:
+
+  - additive identity: 0(−x) = 0(x) = 0
+  - closed under addition: e₁(−x) + e₂(−x) = e₁(x) + e₂(x)
+  - closed under scalar multiplication: c·e(−x) = c·e(x)
+
+V_o is a subspace:
+
+  - additive identity: 0(−x) = 0(x) = 0
+  - closed under addition:
+        o₁(−x) + o₂(−x) = −o₁(x) − o₂(x) = −(o₁(x) + o₂(x))
+  - closed under scalar multiplication: c·o(−x) = −c·o(x) = −(c·o(x))
+
+So 𝐑^𝐑 = V_e + V_o.
+
+Directness. For f ∈ V_e ∩ V_o,
+
+    f(x) = f(−(−x)) = f(−x) = −f(−x) = 0,
+
+so V_e ∩ V_o = {0}, and the sum is direct (1.46).
+
+<!-- correct -->
