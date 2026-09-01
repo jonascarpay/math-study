@@ -70,6 +70,14 @@ Chapter 1 sections and their exercise sets:
 | 1B | Definition of Vector Space | 8 | 16–17 | 30–31 |
 | 1C | Subspaces | 24 | 24–26 | 38–40 |
 
+Chapter 2 sections and their exercise sets:
+
+| Section | Title | Exercises | Book page | PDF page |
+|---|---|---|---|---|
+| 2A | Span and Linear Independence | 20 | 37–38 | 51–52 |
+| 2B | Bases | 11 | 42–43 | 56–57 |
+| 2C | Dimension | 20 | 48–50 | 62–64 |
+
 ## Conventions in this book
 
 - Numbered items (1.1, 1.20, 1.34, …) are a single continuous sequence per
