@@ -4,7 +4,23 @@
 
        {(x, y, z) ∈ 𝐅³ : x + y + z = 0}.
 
-<!-- pending -->
+Write U = {(x, y, z) ∈ 𝐅³ : x + y + z = 0}. The list is
+
+    (1, −1, 0), (1, 0, −1), (0, 0, 0), (2, −2, 0).
+
+U ⊆ span: given (x, y, z) ∈ U,
+
+    (x, y, z) = (−y − z, y, z)                    (set predicate)
+              = −y(1, −1, 0) − z(1, 0, −1).
+
+span ⊆ U: a linear combination
+
+    x(1, −1, 0) + y(1, 0, −1) + w(0, 0, 0) + z(2, −2, 0)
+      = (x + y + 2z, −x − 2z, −y)
+
+fulfills the condition, since (x + y + 2z) + (−x − 2z) + (−y) = 0.
+
+<!-- correct -->
 
 2. Prove or give a counterexample: If v₁, v₂, v₃, v₄ spans V, then the list
 
@@ -12,7 +28,31 @@
 
    also spans V.
 
-<!-- pending -->
+True.
+
+span(v₁ − v₂, v₂ − v₃, v₃ − v₄, v₄) ⊆ V is automatic. For the other
+inclusion, let v ∈ V. Since v₁, v₂, v₃, v₄ spans V, there exist
+c₁, c₂, c₃, c₄ ∈ 𝐅 with
+
+    v = c₁v₁ + c₂v₂ + c₃v₃ + c₄v₄.
+
+A linear combination of the second list, distributed and grouped:
+
+    a₁(v₁ − v₂) + a₂(v₂ − v₃) + a₃(v₃ − v₄) + a₄v₄
+      = a₁v₁ − a₁v₂ + a₂v₂ − a₂v₃ + a₃v₃ − a₃v₄ + a₄v₄
+      = a₁v₁ + (a₂ − a₁)v₂ + (a₃ − a₂)v₃ + (a₄ − a₃)v₄.
+
+Equating with the expression for v, it suffices to solve
+
+    a₁ = c₁
+    a₂ − a₁ = c₂  ⟹  a₂ − c₁ = c₂  ⟹  a₂ = c₁ + c₂
+    a₃ − a₂ = c₃  ⟹  a₃ − (c₁ + c₂) = c₃  ⟹  a₃ = c₁ + c₂ + c₃
+    a₄ − a₃ = c₄  ⟹  a₄ − (c₁ + c₂ + c₃) = c₄  ⟹  a₄ = c₁ + c₂ + c₃ + c₄
+
+These a₁, a₂, a₃, a₄ exist for every v ∈ V, so
+v ∈ span(v₁ − v₂, v₂ − v₃, v₃ − v₄, v₄).
+
+<!-- correct -->
 
 3. Suppose v₁, …, v_m is a list of vectors in V. For k ∈ {1, …, m}, let
 
