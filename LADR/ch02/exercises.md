@@ -49,7 +49,24 @@ such subspace, so V = span(L₁) ⊆ span(L₂).
 
    Show that span(v₁, …, v_m) = span(w₁, …, w_m).
 
-<!-- pending -->
+Write L₁ = v₁, …, v_m and L₂ = w₁, …, w_m, with w_k = v₁ + ⋯ + v_k.
+Write U₁ = span(L₁) and U₂ = span(L₂). Claim U₁ = U₂.
+
+U₂ ⊆ U₁:
+
+  - every w in L₂ is a sum of v's in U₁,
+  - U₁ is a subspace,
+  - so every w in L₂ is in U₁,
+  - so span of the w's is a subspace of U₁ (2.6).
+
+U₁ ⊆ U₂: in other words, ∀k. v_k ∈ U₂.
+
+  - obvious for k = 1, and for k > 1:
+  - v_k = w_k − w_{k−1},
+  - w_k and w_{k−1} are in U₂,
+  - so v_k is in U₂.
+
+<!-- correct -->
 
 4. (a) Show that a list of length one in a vector space is linearly
        independent if and only if the vector in the list is not 0.
@@ -58,7 +75,43 @@ such subspace, so V = span(L₁) ⊆ span(L₂).
        independent if and only if neither of the two vectors in the list is a
        scalar multiple of the other.
 
-<!-- pending -->
+(a) Negate both sides; the claim becomes
+
+    the list v is linearly dependent ⟺ v = 0,
+
+where by 2.15 and 2.17 the left side is ∃a ∈ 𝐅. (av = 0 ∧ a ≠ 0).
+
+(⟹) Let a ∈ 𝐅 with av = 0 and a ≠ 0. Scale by 1/a:
+
+      v = 1v = ((1/a)a)v = (1/a)(av) = (1/a)0 = 0.
+
+(⟸) Assume v = 0. Take a = 1: then av = 0 and a ≠ 0.
+
+(b) For v, w ∈ V, "neither is a scalar multiple of the other" is
+
+    ¬(∃c ∈ 𝐅. v = cw) ∧ ¬(∃c ∈ 𝐅. w = cv).
+
+Negate both sides; the claim becomes
+
+    ∃a, b ∈ 𝐅. (av + bw = 0 ∧ (a ≠ 0 ∨ b ≠ 0))
+      ⟺ (∃c ∈ 𝐅. v = cw) ∨ (∃c ∈ 𝐅. w = cv).
+
+(⟹) Let a, b ∈ 𝐅 with av + bw = 0 and a ≠ 0 or b ≠ 0.
+
+  - a ≠ 0: scale by 1/a:
+
+      v + (b/a)w = 0,  so  v = (−b/a)w;
+
+    take c = −b/a.
+  - b ≠ 0: same argument, giving w = (−a/b)v.
+
+(⟸) Assume v = cw for some c ∈ 𝐅. Take a = 1, b = −c:
+
+    av + bw = cw − cw = 0,  and  a = 1 ≠ 0.
+
+Same argument for w = cv.
+
+<!-- correct -->
 
 5. Find a number t such that
 
