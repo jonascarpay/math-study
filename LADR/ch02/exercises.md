@@ -28,29 +28,18 @@ fulfills the condition, since (x + y + 2z) + (−x − 2z) + (−y) = 0.
 
    also spans V.
 
-True.
+True. Write L₁ = v₁, v₂, v₃, v₄ and L₂ = v₁ − v₂, v₂ − v₃, v₃ − v₄, v₄.
 
-span(v₁ − v₂, v₂ − v₃, v₃ − v₄, v₄) ⊆ V is automatic. For the other
-inclusion, let v ∈ V. Since v₁, v₂, v₃, v₄ spans V, there exist
-c₁, c₂, c₃, c₄ ∈ 𝐅 with
+span(L₂) ⊆ V: by 2.6, the span of a list of vectors in V is a subspace of V.
 
-    v = c₁v₁ + c₂v₂ + c₃v₃ + c₄v₄.
+V ⊆ span(L₂): span(L₂) is a subspace containing L₂, so
 
-A linear combination of the second list, distributed and grouped:
+    contains v₃ − v₄, v₄  ⟹  contains v₃
+    contains v₂ − v₃, v₃  ⟹  contains v₂
+    contains v₁ − v₂, v₂  ⟹  contains v₁
 
-    a₁(v₁ − v₂) + a₂(v₂ − v₃) + a₃(v₃ − v₄) + a₄v₄
-      = a₁v₁ − a₁v₂ + a₂v₂ − a₂v₃ + a₃v₃ − a₃v₄ + a₄v₄
-      = a₁v₁ + (a₂ − a₁)v₂ + (a₃ − a₂)v₃ + (a₄ − a₃)v₄.
-
-Equating with the expression for v, it suffices to solve
-
-    a₁ = c₁
-    a₂ − a₁ = c₂  ⟹  a₂ − c₁ = c₂  ⟹  a₂ = c₁ + c₂
-    a₃ − a₂ = c₃  ⟹  a₃ − (c₁ + c₂) = c₃  ⟹  a₃ = c₁ + c₂ + c₃
-    a₄ − a₃ = c₄  ⟹  a₄ − (c₁ + c₂ + c₃) = c₄  ⟹  a₄ = c₁ + c₂ + c₃ + c₄
-
-These a₁, a₂, a₃, a₄ exist for every v ∈ V, so
-v ∈ span(v₁ − v₂, v₂ − v₃, v₃ − v₄, v₄).
+So span(L₂) is a subspace containing L₁, and by 2.6, span(L₁) is the smallest
+such subspace, so V = span(L₁) ⊆ span(L₂).
 
 <!-- correct -->
 
