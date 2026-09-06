@@ -29,13 +29,13 @@ I will either present an answer, in which case you check my working, I will go i
 
 ### Format
 
-The format is as described in CLAUDE.md:
+The format is as described in `CLAUDE.md`:
 
 ```
 By default, assume I'm on mobile.
 
 - On _mobile_, use single dollar sign delimited LaTeX (i.e. `$...$`) for inline math, and double dollar sign delimited LaTeX for display math (i.e. `$$...$$`).
-- On _desktop_, use parenthesis-delimited LaTeX (i.e. `\(...\)`) for inline math, and square bracket delimited LaTeX for display math (i.e. `\[...\]`).
+- On _desktop_, use parenthesis-delimited LaTeX (i.e. `\(...\)`) for inline math, and square bracket delimited LaTeX for display math (i.e. `\[...\]`). The renderer does not pick up LaTeX expressions that don't contain backslash syntax, so prefer e.g. `\(\mathit{I}\)` to \(I\).
 - On _terminal_, exclusively use terminal-compatible Unicode and ASCII.
 ```
 

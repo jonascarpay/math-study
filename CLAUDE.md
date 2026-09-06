@@ -92,15 +92,8 @@ Which one you should use depends on the device I'm using, since each has a diffe
 By default, assume I'm on mobile.
 
 - On _mobile_, use single dollar sign delimited LaTeX (i.e. `$...$`) for inline math, and double dollar sign delimited LaTeX for display math (i.e. `$$...$$`).
-- On _desktop_, use parenthesis-delimited LaTeX (i.e. `\(...\)`) for inline math, and square bracket delimited LaTeX for display math (i.e. `\[...\]`).
+- On _desktop_, use parenthesis-delimited LaTeX (i.e. `\(...\)`) for inline math, and square bracket delimited LaTeX for display math (i.e. `\[...\]`). The renderer does not pick up LaTeX expressions that don't contain backslash syntax, so prefer e.g. `\(\mathit{I}\)` to \(I\).
 - On _terminal_, exclusively use terminal-compatible Unicode and ASCII.
-
-On _desktop_, inline `\(...\)` only renders if its content contains a
-backslash command. Plain-ASCII content is left as literal text, so `\(I\)`
-and `\( x \)` come out as `(I)` and `( x )`, while `\(A_\alpha\)` and
-`\(I \subseteq I\)` render fine. Padding with spaces does not help. When an
-inline expression is a bare symbol, force a command into it — `\(\mathit{I}\)`
-or `\(I\,\)` both work.
 
 ## Version control
 
