@@ -119,12 +119,46 @@ Same argument for w = cv.
 
    is not linearly independent in 𝐑³.
 
-<!-- pending -->
+t = 2, since
+
+    3(3, 1, 4) − 2(2, −3, 5) − 1(5, 9, t)
+      = (9 − 4 − 5, 3 + 6 − 9, 12 − 10 − t)
+      = (0, 0, 2 − t),
+
+which is 0 for t = 2, with coefficients 3, −2, −1 not all 0.
+
+<!-- correct -->
 
 6. Show that the list (2, 3, 1), (1, −1, 2), (7, 3, c) is linearly dependent in
    𝐅³ if and only if c = 8.
 
-<!-- pending -->
+Fix c ∈ 𝐅, and write v₁, v₂, v₃ for the three vectors. The system
+x v₁ + y v₂ + z v₃ = 0 is
+
+    2x +  y + 7z = 0    (1)
+    3x −  y + 3z = 0    (2)
+     x + 2y + cz = 0    (3)
+
+Each step below replaces one equation by an equivalent one, given the others:
+
+    (2)  ⟺  y = 3x + 3z
+    (1)  ⟺  2x + (3x + 3z) + 7z = 5x + 10z = 0  ⟺  x = −2z
+    (3)  ⟺  −2z − 12z + 6z + cz = −8z + cz = 0  ⟺  8z = cz
+
+So x v₁ + y v₂ + z v₃ = 0 ⟺ (x = −2z and y = −3z and 8z = cz), and the list
+is linearly dependent iff
+
+    ∃x, y, z ∈ 𝐅, not all 0, with x = −2z, y = −3z, 8z = cz.
+
+(⟸) Assume c = 8. Take z = 1, y = −3, x = −2: then 8z = cz, and x, y, z are
+not all 0.
+
+(⟹) Fix such x, y, z. From x = −2z, x ≠ 0 iff z ≠ 0, and likewise y ≠ 0 iff
+z ≠ 0 from y = −3z, so all three are nonzero. Then from 8z = cz with z ≠ 0,
+
+    c = 1c = (1/z)zc = (1/z)(8z) = 8.
+
+<!-- correct -->
 
 7. (a) Show that if we think of 𝐂 as a vector space over 𝐑, then the list
        1 + i, 1 − i is linearly independent.
