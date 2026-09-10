@@ -166,7 +166,23 @@ z ≠ 0 from y = −3z, so all three are nonzero. Then from 8z = cz with z ≠ 0
    (b) Show that if we think of 𝐂 as a vector space over 𝐂, then the list
        1 + i, 1 − i is linearly dependent.
 
-<!-- pending -->
+(a) Assume a(1 + i) + b(1 − i) = 0, with a, b ∈ 𝐑; show a = b = 0.
+
+    a + ai + b − bi = 0
+    a + ai = −b + bi
+
+With a, b ∈ 𝐑, this is an equality between complex numbers, and two complex
+numbers are equal iff their coefficients are equal (1.1), so
+
+    a = −b  and  a = b,
+
+hence a = −a, so a = b = 0.
+
+(b) There exist a, b ∈ 𝐂, not both 0, with a(1 + i) + b(1 − i) = 0:
+
+    (1 − i)(1 + i) + (−1 − i)(1 − i) = 2 − 2 = 0.
+
+<!-- correct -->
 
 8. Suppose v₁, v₂, v₃, v₄ is linearly independent in V. Prove that the list
 
@@ -174,7 +190,19 @@ z ≠ 0 from y = −3z, so all three are nonzero. Then from 8z = cz with z ≠ 0
 
    is also linearly independent.
 
-<!-- pending -->
+Write H for the linear independence of v₁, v₂, v₃, v₄. The list
+v₁ − v₂, v₂ − v₃, v₃ − v₄, v₄ is linearly independent iff
+
+    a(v₁ − v₂) + b(v₂ − v₃) + c(v₃ − v₄) + d v₄ = 0  ⟹  a = b = c = d = 0,
+
+i.e. iff
+
+    a v₁ + (b − a) v₂ + (c − b) v₃ + (d − c) v₄ = 0  ⟹  a = b = c = d = 0.
+
+Instantiate H with a, b − a, c − b, d − c, giving a = b − a = c − b = d − c = 0.
+Then a = 0 gives b − a = b = 0, gives c − b = c = 0, gives d − c = d = 0.
+
+<!-- correct -->
 
 9. Prove or give a counterexample: If v₁, v₂, …, v_m is a linearly independent
    list of vectors in V, then
@@ -183,7 +211,18 @@ z ≠ 0 from y = −3z, so all three are nonzero. Then from 8z = cz with z ≠ 0
 
    is linearly independent.
 
-<!-- pending -->
+True. Write H for the linear independence of v₁, …, v_m.
+
+Goal: a(5v₁ − 4v₂) + b v₂ + c v₃ + ⋯ + z v_m = 0 ⟹ a = b = c = ⋯ = z = 0.
+
+Assume I: a(5v₁ − 4v₂) + b v₂ + c v₃ + ⋯ + z v_m = 0. Rewriting I,
+
+    5a v₁ + (b − 4a) v₂ + c v₃ + ⋯ + z v_m = 0.
+
+Instantiating H with 5a, b − 4a, c, …, z gives 5a = b − 4a = c = ⋯ = z = 0.
+Then 5a = 0 gives a = 0, and b − 4a = b = 0.
+
+<!-- correct -->
 
 10. Prove or give a counterexample: If v₁, v₂, …, v_m is a linearly independent
     list of vectors in V and λ ∈ 𝐅 with λ ≠ 0, then λv₁, λv₂, …, λv_m is
