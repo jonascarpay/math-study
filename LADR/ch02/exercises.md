@@ -228,24 +228,54 @@ Then 5a = 0 gives a = 0, and b − 4a = b = 0.
     list of vectors in V and λ ∈ 𝐅 with λ ≠ 0, then λv₁, λv₂, …, λv_m is
     linearly independent.
 
-<!-- pending -->
+<!-- skipped -->
 
 11. Prove or give a counterexample: If v₁, …, v_m and w₁, …, w_m are linearly
     independent lists of vectors in V, then the list v₁ + w₁, …, v_m + w_m is
     linearly independent.
 
-<!-- pending -->
+Counterexample. Take m = 1, V = 𝐅, v₁ = 1, w₁ = −1.
+
+The lists 1 and −1 are each linearly independent, since a list of length one is
+linearly independent iff its vector is not 0 (2.16(c)).
+
+But v₁ + w₁ = 1 + (−1) = 0, and every list containing the 0 vector is linearly
+dependent (2.18).
+
+<!-- correct -->
 
 12. Suppose v₁, …, v_m is linearly independent in V and w ∈ V. Prove that if
     v₁ + w, …, v_m + w is linearly dependent, then w ∈ span(v₁, …, v_m).
 
-<!-- pending -->
+Fix a₁, …, a_m ∈ 𝐅 not all 0 such that
+
+    a₁(v₁ + w) + ⋯ + a_m(v_m + w) = 0.
+
+Rewriting,
+
+    a₁v₁ + ⋯ + a_m v_m + (a₁ + ⋯ + a_m)w = 0.
+
+Let u = a₁v₁ + ⋯ + a_m v_m and c = a₁ + ⋯ + a_m, so u + cw = 0.
+
+u ≠ 0, by linear independence of v₁, …, v_m and the a_i not all being 0.
+
+    u = −cw.
+
+If c = 0 then u = 0w = 0 (1.30), contradiction; so c ≠ 0. Multiplying by
+c′ = −1/c,
+
+    c′u = w,
+    c′a₁v₁ + ⋯ + c′a_m v_m = w,
+
+so w ∈ span(v₁, …, v_m).
+
+<!-- correct -->
 
 13. Suppose v₁, …, v_m is linearly independent in V and w ∈ V. Show that
 
         v₁, …, v_m, w is linearly independent ⟺ w ∉ span(v₁, …, v_m).
 
-<!-- pending -->
+<!-- skipped -->
 
 14. Suppose v₁, …, v_m is a list of vectors in V. For k ∈ {1, …, m}, let
 
@@ -254,37 +284,79 @@ Then 5a = 0 gives a = 0, and b − 4a = b = 0.
     Show that the list v₁, …, v_m is linearly independent if and only if the
     list w₁, …, w_m is linearly independent.
 
-<!-- pending -->
+(⟹) Assume
+
+    a₁w₁ + a₂w₂ + ⋯ + a_m w_m
+      = a₁v₁ + a₂(v₁ + v₂) + ⋯ + a_m(v₁ + v₂ + ⋯ + v_m)
+      = (a₁ + a₂ + ⋯ + a_m)v₁ + (a₂ + ⋯ + a_m)v₂ + ⋯ + a_m v_m
+      = 0.
+
+Applying linear independence of v₁, …, v_m gives
+
+    a₁ + a₂ + ⋯ + a_m = a₂ + ⋯ + a_m = ⋯ = a_{m−1} + a_m = a_m = 0.
+
+Since a_m is zero, a_{m−1} is zero, and by the same process every element, so
+
+    a₁ = a₂ = ⋯ = a_m = 0.
+
+(⟸) Assume
+
+    a₁v₁ + a₂v₂ + ⋯ + a_m v_m
+      = a₁w₁ + a₂(w₂ − w₁) + ⋯ + a_m(w_m − w_{m−1})
+      = (a₁ − a₂)w₁ + (a₂ − a₃)w₂ + ⋯ + (a_{m−1} − a_m)w_{m−1} + a_m w_m
+      = 0.
+
+Applying linear independence of w₁, …, w_m gives
+
+    a₁ − a₂ = a₂ − a₃ = ⋯ = a_{m−1} − a_m = a_m = 0.
+
+Since the last term is 0, the second-to-last term is zero, and by induction all
+of them are, so
+
+    a₁ = a₂ = ⋯ = a_m = 0.
+
+<!-- correct -->
 
 15. Explain why there does not exist a list of six polynomials that is linearly
     independent in 𝒫₄(𝐅).
 
-<!-- pending -->
+2.22 states that any linearly independent list must have length ≤ the length of
+any spanning list.
+
+𝒫₄(𝐅) is spanned by 1, z, z², z³, z⁴, which has 5 elements.
+
+Hence no linearly independent list of length 6 exists in 𝒫₄(𝐅).
+
+<!-- correct -->
 
 16. Explain why no list of four polynomials spans 𝒫₄(𝐅).
 
-<!-- pending -->
+1, z, z², z³, z⁴ is linearly independent (2.16(b)).
+
+By 2.22, no spanning list can be shorter than a linearly independent list.
+
+<!-- correct -->
 
 17. Prove that V is infinite-dimensional if and only if there is a sequence
     v₁, v₂, … of vectors in V such that v₁, …, v_m is linearly independent for
     every positive integer m.
 
-<!-- pending -->
+<!-- skipped -->
 
 18. Prove that 𝐅^∞ is infinite-dimensional.
 
-<!-- pending -->
+<!-- skipped -->
 
 19. Prove that the real vector space of all continuous real-valued functions on
     the interval [0, 1] is infinite-dimensional.
 
-<!-- pending -->
+<!-- skipped -->
 
 20. Suppose p₀, p₁, …, p_m are polynomials in 𝒫_m(𝐅) such that p_k(2) = 0 for
     each k ∈ {0, …, m}. Prove that p₀, p₁, …, p_m is not linearly independent
     in 𝒫_m(𝐅).
 
-<!-- pending -->
+<!-- skipped -->
 
 # Exercises 2B, page 42
 
