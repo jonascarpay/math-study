@@ -228,7 +228,20 @@ Then 5a = 0 gives a = 0, and b − 4a = b = 0.
     list of vectors in V and λ ∈ 𝐅 with λ ≠ 0, then λv₁, λv₂, …, λv_m is
     linearly independent.
 
-<!-- skipped -->
+Assume
+
+    a₁(λv₁) + ⋯ + a_m(λv_m)
+      = λ(a₁v₁) + ⋯ + λ(a_m v_m)      (assoc., comm. of scalar mult.)
+      = λ(a₁v₁ + ⋯ + a_m v_m)          (distributivity)
+      = 0.
+
+Multiplying both sides by 1/λ gives
+
+    a₁v₁ + ⋯ + a_m v_m = 0.
+
+Applying H gives a₁ = ⋯ = a_m = 0.
+
+<!-- correct -->
 
 11. Prove or give a counterexample: If v₁, …, v_m and w₁, …, w_m are linearly
     independent lists of vectors in V, then the list v₁ + w₁, …, v_m + w_m is
@@ -362,11 +375,112 @@ By 2.22, no spanning list can be shorter than a linearly independent list.
 
 1. Find all vector spaces that have exactly one basis.
 
-<!-- pending -->
+Let V have a basis v₁, …, v_m. Then 2v₁, …, 2v_m is also a basis, since it is
+linearly independent (2A.10, with λ = 2) and any v = a₁v₁ + ⋯ + a_m v_m
+= (a₁/2)(2v₁) + ⋯ + (a_m/2)(2v_m).
+
+Therefore, for the basis to be unique, v₁, …, v_m = 2v₁, …, 2v_m.
+
+Since v = 2v ⟺ 0 = v, which violates linear independence (2.18), only the empty
+list satisfies this.
+
+The empty list spans only {0} (2.4).
+
+<!-- correct -->
 
 2. Verify all assertions in Example 2.27.
 
-<!-- pending -->
+(a) The list (1, 0, …, 0), (0, 1, 0, …, 0), …, (0, …, 0, 1) is a basis of 𝐅ⁿ.
+
+Linearly independent:
+
+    a₁(1, …, 0) + ⋯ + aₙ(0, …, 1) = (a₁, …, 0) + ⋯ + (0, …, aₙ)
+                                   = (a₁, …, aₙ) = 0
+      ⟹ a₁ = ⋯ = aₙ = 0.
+
+Spans:
+
+    (a₁, …, aₙ) = (a₁, …, 0) + ⋯ + (0, …, aₙ)
+                = a₁(1, …, 0) + ⋯ + aₙ(0, …, 1).
+
+(b) The list (1, 2), (3, 5) is a basis of 𝐅².
+
+Linearly independent:
+
+    a₁(1, 2) + a₂(3, 5) = (a₁ + 3a₂, 2a₁ + 5a₂) = 0
+      ⟹ a₁ + 3a₂ = 0, 2a₁ + 5a₂ = 0
+      ⟹ a₁ = −3a₂, so −6a₂ + 5a₂ = −a₂ = 0, hence a₂ = a₁ = 0.
+
+Spans: given (a, b), solve
+
+    a₁ + 3a₂ = a
+    2a₁ + 5a₂ = b
+
+to get a₂ = 2a − b and a₁ = 3b − 5a, so
+
+    (a, b) = (3b − 5a)(1, 2) + (2a − b)(3, 5).
+
+(c) The list (1, 2, −4), (7, −5, 6) is linearly independent in 𝐅³ but does not
+span 𝐅³.
+
+Linearly independent: if it were not, by 2.16(d) there would be
+
+  - a scalar a with a(1, 2, −4) = (7, −5, 6), i.e. a = 7 and 2a = −5;
+  - a scalar b with (1, 2, −4) = b(7, −5, 6), i.e. 7b = 1 ⟺ b = 1/7 and
+    2 = −5b ⟺ b = −2/5.
+
+Does not span: (1, 0, 0), (0, 1, 0), (0, 0, 1) is linearly independent, so by
+2.22 a spanning list must have length at least 3.
+
+(d) The list (1, 2), (3, 5), (4, 13) spans 𝐅² but is not linearly independent.
+
+Not linearly independent: (1, 0), (0, 1) is shorter and spans the space, so by
+2.22 no linearly independent list has length 3.
+
+Spans: by the computation in (b),
+
+    (x, y) = (3y − 5x)(1, 2) + (2x − y)(3, 5).
+
+(e) The list (1, 1, 0), (0, 0, 1) is a basis of U = {(x, x, y) ∈ 𝐅³ : x, y ∈ 𝐅}.
+
+Linearly independent:
+
+    a(1, 1, 0) + b(0, 0, 1) = (a, a, b) = 0 ⟹ a = b = 0.
+
+U ⊆ span: (x, x, y) = x(1, 1, 0) + y(0, 0, 1).
+
+span ⊆ U: a(1, 1, 0) + b(0, 0, 1) = (a, a, b) is in U, with x = a, y = b.
+
+(f) The list (1, −1, 0), (1, 0, −1) is a basis of
+U = {(x, y, z) ∈ 𝐅³ : x + y + z = 0}.
+
+Linearly independent:
+
+    a(1, −1, 0) + b(1, 0, −1) = (a + b, −a, −b) = 0
+      ⟹ a + b = −a = −b = 0 ⟹ a = b = 0.
+
+U ⊆ span: (x, y, z) ∈ U gives x = −y − z, so
+
+    (x, y, z) = (−y − z, y, z) = −y(1, −1, 0) − z(1, 0, −1).
+
+span ⊆ U: a(1, −1, 0) + b(1, 0, −1) = (a + b, −a, −b) is in U, since
+(a + b) + (−a) + (−b) = 0.
+
+(g) The list 1, z, …, zᵐ is a basis of 𝒫_m(𝐅).
+
+Linearly independent:
+
+    a₀1 + a₁z + ⋯ + a_m zᵐ = 0 = 0·1 + 0·z + ⋯ + 0·zᵐ
+      ⟹ a₀ = a₁ = ⋯ = a_m = 0,
+
+since the coefficients of a polynomial are uniquely determined by the
+polynomial (2.10).
+
+Spans:
+
+    a₀ + a₁z + ⋯ + a_m zᵐ = a₀(1) + a₁(z) + ⋯ + a_m(zᵐ).
+
+<!-- correct -->
 
 3. (a) Let U be the subspace of 𝐑⁵ defined by
 
@@ -378,7 +492,7 @@ By 2.22, no spanning list can be shorter than a linearly independent list.
 
    (c) Find a subspace W of 𝐑⁵ such that 𝐑⁵ = U ⊕ W.
 
-<!-- pending -->
+<!-- skipped -->
 
 4. (a) Let U be the subspace of 𝐂⁵ defined by
 
@@ -390,19 +504,53 @@ By 2.22, no spanning list can be shorter than a linearly independent list.
 
    (c) Find a subspace W of 𝐂⁵ such that 𝐂⁵ = U ⊕ W.
 
-<!-- pending -->
+<!-- skipped -->
 
 5. Suppose V is finite-dimensional and U, W are subspaces of V such that
    V = U + W. Prove that there exists a basis of V consisting of vectors in
    U ∪ W.
 
-<!-- pending -->
+U and W are finite-dimensional by 2.25. Say
+
+    U = span(u₁, …, u_m),  W = span(w₁, …, w_n).
+
+By 1.36,
+
+    V = U + W = {u + w : u ∈ span(u₁, …, u_m), w ∈ span(w₁, …, w_n)},
+
+so any v ∈ V is of the form a₁u₁ + ⋯ + a_m u_m + b₁w₁ + ⋯ + b_n w_n. Hence
+
+    V = span(u₁, …, u_m, w₁, …, w_n).
+
+So we have a list of vectors in U ∪ W that spans V. By 2.30, this list contains
+a basis.
+
+<!-- correct -->
 
 6. Prove or give a counterexample: If p₀, p₁, p₂, p₃ is a list in 𝒫₃(𝐅) such
    that none of the polynomials p₀, p₁, p₂, p₃ has degree 2, then
    p₀, p₁, p₂, p₃ is not a basis of 𝒫₃(𝐅).
 
-<!-- pending -->
+Counterexample. The list
+
+    1, z, z² + z³, z³
+
+has degrees 0, 1, 3, 3, so none of its polynomials has degree 2, yet it is a
+basis of 𝒫₃(𝐅).
+
+Linearly independent:
+
+    a₀1 + a₁z + a₂(z² + z³) + a₃z³ = a₀ + a₁z + a₂z² + (a₂ + a₃)z³ = 0
+      ⟹ a₀ = a₁ = a₂ = a₂ + a₃ = 0 ⟹ a₃ = 0.
+
+Spans:
+
+    c₀ + c₁z + c₂z² + c₃z³ = c₀1 + c₁z + c₂(z² + z³) + (c₃ − c₂)z³,
+
+and conversely a₀1 + a₁z + a₂(z² + z³) + a₃z³ = a₀ + a₁z + a₂z² + (a₂ + a₃)z³
+is in 𝒫₃(𝐅).
+
+<!-- correct -->
 
 7. Suppose v₁, v₂, v₃, v₄ is a basis of V. Prove that
 
@@ -410,13 +558,34 @@ By 2.22, no spanning list can be shorter than a linearly independent list.
 
    is also a basis of V.
 
-<!-- pending -->
+<!-- skipped -->
 
 8. Prove or give a counterexample: If v₁, v₂, v₃, v₄ is a basis of V and U is a
    subspace of V such that v₁, v₂ ∈ U and v₃ ∉ U and v₄ ∉ U, then v₁, v₂ is a
    basis of U.
 
-<!-- pending -->
+Counterexample. In V = 𝐅⁴, take the basis
+
+    v₁ = (1, 0, 0, 0),  v₂ = (0, 1, 0, 0),
+    v₃ = (0, 0, 1, 1),  v₄ = (0, 0, 1, −1)
+
+and let U = span(u₁, u₂, u₃), where
+
+    u₁ = (1, 0, 0, 0),  u₂ = (0, 1, 0, 0),  u₃ = (0, 0, 1, 0),
+
+so U = {(a₁, a₂, a₃, 0) : a₁, a₂, a₃ ∈ 𝐅}.
+
+U is a subspace of V, since it is the span of a list of vectors in V (2.6).
+
+v₁, v₂ ∈ U, since v₁ = u₁ and v₂ = u₂.
+
+v₃, v₄ ∉ U, since (0, 0, 1, ±1) = (a₁, a₂, a₃, 0) would require 1 = 0.
+
+But span(v₁, v₂) = {(a₁, a₂, 0, 0) : a₁, a₂ ∈ 𝐅}, and u₃ = (0, 0, 1, 0) is not in
+it, since that would require 1 = 0. So v₁, v₂ does not span U, and is not a
+basis of U.
+
+<!-- correct -->
 
 9. Suppose v₁, …, v_m is a list of vectors in V. For k ∈ {1, …, m}, let
 
@@ -425,7 +594,7 @@ By 2.22, no spanning list can be shorter than a linearly independent list.
    Show that v₁, …, v_m is a basis of V if and only if w₁, …, w_m is a basis
    of V.
 
-<!-- pending -->
+<!-- skipped -->
 
 10. Suppose U and W are subspaces of V such that V = U ⊕ W. Suppose also that
     u₁, …, u_m is a basis of U and w₁, …, wₙ is a basis of W. Prove that
@@ -434,7 +603,33 @@ By 2.22, no spanning list can be shorter than a linearly independent list.
 
     is a basis of V.
 
-<!-- pending -->
+U = span(u₁, …, u_m),  W = span(w₁, …, wₙ).
+
+Spans: by 1.36,
+
+    V = {u + w : u ∈ span(u₁, …, u_m), w ∈ span(w₁, …, wₙ)},
+
+so any v ∈ V has the form a₁u₁ + ⋯ + a_m u_m + b₁w₁ + ⋯ + bₙwₙ, and by
+definition of span, any v is in span(u₁, …, u_m, w₁, …, wₙ).
+
+Linearly independent: let v = u + w with u ∈ U and w ∈ W, and assume v = 0.
+Then
+
+    u + w = 0 ⟺ u = −w,
+
+so −w, and therefore w, is in U, and likewise u is in W. By directness
+(1.46, U ∩ W = {0}), u = w = 0.
+
+Now let
+
+    v = u + w = a₁u₁ + ⋯ + a_m u_m + b₁w₁ + ⋯ + bₙwₙ = 0.
+
+By the above u = a₁u₁ + ⋯ + a_m u_m = 0 and w = b₁w₁ + ⋯ + bₙwₙ = 0, so by
+linear independence of u₁, …, u_m and of w₁, …, wₙ,
+
+    a₁ = ⋯ = a_m = b₁ = ⋯ = bₙ = 0.
+
+<!-- correct -->
 
 11. Suppose V is a real vector space. Show that if v₁, …, vₙ is a basis of V
     (as a real vector space), then v₁, …, vₙ is also a basis of the
@@ -443,7 +638,37 @@ By 2.22, no spanning list can be shorter than a linearly independent list.
     > See Exercise 8 in Section 1B for the definition of the complexification
     > V_𝐂.
 
-<!-- pending -->
+Assume v₁, …, vₙ is a basis for V. Goal: v₁ + i0, …, vₙ + i0 is a basis for V_𝐂.
+
+Linearly independent:
+
+    (a₁ + ib₁)(v₁ + i0) + ⋯ + (aₙ + ibₙ)(vₙ + i0)
+      = a₁v₁ + ⋯ + aₙvₙ + i(b₁v₁ + ⋯ + bₙvₙ) = 0.
+
+Complex equality requires componentwise equality, so
+
+    a₁v₁ + ⋯ + aₙvₙ = 0
+    b₁v₁ + ⋯ + bₙvₙ = 0,
+
+and by linear independence of v₁, …, vₙ: a₁ = ⋯ = aₙ = b₁ = ⋯ = bₙ = 0.
+
+span ⊆ V_𝐂: let v ∈ span(v₁ + i0, …, vₙ + i0), so
+
+    v = (a₁ + ib₁)(v₁ + i0) + ⋯ + (aₙ + ibₙ)(vₙ + i0)
+      = a₁v₁ + ⋯ + aₙvₙ + i(b₁v₁ + ⋯ + bₙvₙ)
+      = v_r + iv_c.
+
+v_r and v_c are in V, so by the definition of the complexification,
+v_r + iv_c ∈ V_𝐂.
+
+V_𝐂 ⊆ span: let v_r + iv_c ∈ V_𝐂. By definition v_r and v_c are in
+V = span(v₁, …, vₙ), so
+
+    v_r + iv_c = a₁v₁ + ⋯ + aₙvₙ + i(b₁v₁ + ⋯ + bₙvₙ)
+               = (a₁ + ib₁)(v₁ + i0) + ⋯ + (aₙ + ibₙ)(vₙ + i0)
+               ∈ span(v₁ + i0, …, vₙ + i0).
+
+<!-- correct -->
 
 # Exercises 2C, page 48
 
